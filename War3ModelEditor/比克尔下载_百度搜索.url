@@ -1,0 +1,9 @@
+[DEFAULT]
+BASEURL=https://www.baidu.com/s?wd=%E6%AF%94%E5%85%8B%E5%B0%94%E4%B8%8B%E8%BD%BD
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,11
+[InternetShortcut]
+URL=https://www.baidu.com/s?wd=%E6%AF%94%E5%85%8B%E5%B0%94%E4%B8%8B%E8%BD%BD
+IDList=
+IconFile=https://www.baidu.com/favicon.ico
+IconIndex=1
