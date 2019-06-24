@@ -1,0 +1,20 @@
+BACKDROP 	//背景
+TEXT		//文本
+TEXTAREA	//文字框
+GLUETEXTBUTTON	//按钮
+GLUECHECKBOX	//复选框
+POPUPMENU	//弹出菜单
+SCROLLBAR	//滚动条
+SPRITE		//电影肖像
+SLIDER		//滑块
+BUTTON		//按钮
+EDITBOX		//编辑框。文本框
+HIGHLIGHT	//高光模板
+SCROLLBAR	//滚动条
+MENU		//菜单
+DIALOG		
+SPRITE		//小精灵
+SIMPLEFRAME	//简单框架
+SIMPLESTATUSBAR	//简易工具栏
+SIMPLECHECKBOX	//简单复选框
+Layer "ARTWORK"		层，插图

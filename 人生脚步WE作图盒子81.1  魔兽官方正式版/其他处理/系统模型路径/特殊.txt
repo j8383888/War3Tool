@@ -1,0 +1,15 @@
+Abilities\Weapons\GlaiveMissile\GlaiveMissileTarget.mdl
+Abilities\Weapons\GryphonRiderMissile\GryphonRiderMissileTarget.mdl
+Objects\Spawnmodels\Demon\DemonLargeDeathExplode\DemonLargeDeathExplode.mdl
+Objects\Spawnmodels\Demon\DemonSmallDeathExplode\DemonSmallDeathExplode.mdl
+Objects\Spawnmodels\Human\HCancelDeath\HCancelDeath.mdl
+Objects\Spawnmodels\Human\HumanLargeDeathExplode\HumanLargeDeathExplode.mdl
+Objects\Spawnmodels\Naga\NagaDeath\NagaDeath.mdl
+Objects\Spawnmodels\NightElf\NECancelDeath\NECancelDeath.mdl
+Objects\Spawnmodels\NightElf\NightElfLargeDeathExplode\NightElfLargeDeathExplode.mdl
+Objects\Spawnmodels\Orc\OrcLargeDeathExplode\OrcLargeDeathExplode.mdl
+Objects\Spawnmodels\Orc\OrcSmallDeathExplode\OrcSmallDeathExplode.mdl
+Objects\Spawnmodels\Undead\UCancelDeath\UCancelDeath.mdl
+Objects\Spawnmodels\Undead\UndeadLargeDeathExplode\UndeadLargeDeathExplode.mdl
+Units\NightElf\Wisp\WispExplode.mdl
+Units\Undead\Abomination\AbominationExplosion.mdl

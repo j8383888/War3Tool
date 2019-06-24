@@ -1,0 +1,59 @@
+Filter "文本文件 (*.txt, *.ini)"
+{
+  "txt",
+  "ini"
+}
+
+Filter "Sylk (*.slk)"
+{
+  "slk"
+}
+
+Filter "脚本文件 (*.ai, *.wai, *.j, *.js, *.pld)"
+{
+  "ai",
+  "wai",
+  "j",
+  "js",
+  "pld"
+}
+
+Filter "网页文件 (*.htm, *.html)"
+{
+  "htm",
+  "html"
+}
+
+Filter "模型文件 (*.mdl, *.mdx)"
+{
+  "mdl",
+  "mdx"
+}
+
+Filter "图像文件 (*.bmp, *.tga, *.jpg, *.jpeg, *.pcx, *.blp)"
+{
+  "bmp",
+  "tga",
+  "jpg",
+  "jpeg",
+  "pcx",
+  "blp"
+}
+
+Filter "地图文件 (*.w3m, *.w3x, *.w3n)"
+{
+  "w3m",
+  "w3x",
+  "w3n"
+}
+
+Filter "声音文件 (*.wav)"
+{
+  "wav"
+}
+
+Filter "音乐文件 (*.mp3, *.mid)"
+{
+  "mp3",
+  "mid"
+}
