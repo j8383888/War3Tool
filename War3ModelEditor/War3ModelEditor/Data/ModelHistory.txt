@@ -1,8 +1,8 @@
+C:\Users\Administrator\Desktop\eff\toweranimated_mucai.mdx
+E:\Program\War3Map\resource\model\toweranimated_mucai\toweranimated_mucai.mdx
 E:\Program\War3Map\军团\effect_halo_48\effect_halo_48.mdx
 E:\Program\War3Map\军团\effect_halo_18\effect_halo_18.mdx
 C:\Users\Administrator\Desktop\荒古\consecrate\consecrate.mdx
 C:\Users\Administrator\Desktop\荒古\byakuya kengjing1\byakuya kengjing1.mdx
 C:\Users\Administrator\Desktop\新建文件夹 (2)\seaaura.mdx
 E:\Program\War3Map\resource\model\houses\houses.mdx
-E:\Program\War3Map\resource\model\normalmasterma_byepsilon\normalmasterma_byepsilon.mdx
-D:\QQ\QQData\3308015157\FileRecv\墙，民房\二级或者三级房子\基本房屋\BasicHouse\BasicHouse.mdx
