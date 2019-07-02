@@ -1,0 +1,35 @@
+Orbiter Mesh ASCII Exporter for MilkShape 3D
+by Nicholas Musurca (nmusurca@mindspring.com)
+----------------------------------------------
+
+Description:
+	This plugin for Chumbalum-Soft's popular 3D modeling program MilkShape 3D is intended to assist developers creating models for the freeware game Orbiter (http://www.orbitersim.com/). Send questions, comments, or bug reports to the e-mail address above.
+
+Installation:
+	Extract the contents of this zip file to your MilkShape 3D directory. 
+
+Instructions:
+	To export a MilkShape model to the Orbiter mesh format, go to the File | Export menu, and select the option marked "Orbiter Mesh ASCII...". Enter the desired filename, then click Save.
+
+Important Notes:
+	-You will have to manually convert your texture maps to the DDS format using the dxtex.exe utility included with the Orbiter SDK, and copy them to the Orbiter\Textures directory. The meshes that this plugin generates assume that the converted textures with the new DDS extension will have the same name as the old file. e.g. if you used a texture named "blue.bmp" in your MilkShape model, you would have to convert it to a file named "blue.dds", or else the mesh would not be able to find it.
+
+	-MilkShape 3D stores normals in a strange fashion, and thus all models generated with this plugin will have the NONORMAL flag set; Orbiter will automatically generate the normals at run-time. This should not adversely affect the shading.
+
+	-The shininess slider bar in MilkShape corresponds to the power of the specular color.
+
+	-The alpha texture and transparency slider bar, as well as smoothing groups, bones, and vertex flags, are ignored by this plugin.
+
+Build History:
+
+Version 1.0 - 12/30/01
+------------------------
+Initial Public Release!
+Bugs fixed from beta:
+	-Incorrect normals
+	-Improper material/texture use
+
+Version 1.0b - 12/28/01
+------------------------
+Initial Beta Release!
+

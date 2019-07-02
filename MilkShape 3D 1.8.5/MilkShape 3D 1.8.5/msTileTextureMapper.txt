@@ -1,0 +1,68 @@
+Tile texture mapper tool plug-in for MilkShape3D
+================================================
+version 1.2.0, release date 2004-01-10
+
+Copyright (C) 2002 - 2004 Mikko Rytkönen
+mikko@fractilegames.com
+
+
+What is it?
+-----------
+
+This plugin generates texture coordinates to geometry for tile textures (also
+known as seamless textures). Basically you choose the plane along which the
+texture is repeated and number of repeats along u and v axis on that plane. 
+Cubic mapping can be used for easily mapping textures on complex geometry.
+
+
+How to use it?
+--------------
+
+The plug-in works on selected faces. Texture is repeated within minimal
+rectangle that surrounds all selected vertices on plane (bounding rectangle).
+
+To reverse texture direction on axis (mirror) set the repeat value on that
+axis to a negative value.
+
+Note! After mapping operation it is recommended to weld mapped vertices
+together to reduce geometry vertex count.
+
+Planar mapping:
+
+The mapping plane is specified by choosing the coordinate source axes for
+both u and v texture coordinate. Default settings use X axis as source for
+horizontal (u) coordinates and Z axis for vertical (v) coordinates. This maps
+the texture to XZ -plane (top view).
+
+Use the 'Coplanar faces only' -option to apply texture coordinated only to
+those selected faces that are parallel enough to the mapping plane (in less
+than 45 degrees angle).
+
+Cubic mapping:
+
+Cubic mapping automatically maps texture on each selected face using planar
+mapping with mapping plane that the face is parallel with. You only have to 
+set the number of texture repeats in direction of each axis.
+
+This is practically same thing as doing planar mapping six times with all 
+possible axis configurations and with 'Coplanar faces only' -option set.
+
+
+Version history
+---------------
+
+1.2.0
+- Cubic mapping
+- Better user interface
+
+1.1.1
+- No new features. A quick fix update to buggy 1.1 which caused the whole
+  MS3D crash!
+
+1.1
+- Automatic unwelding of mapped vertices.
+- Option to map "coplanar faces only".
+
+1.0
+- First release.
+

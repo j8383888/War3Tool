@@ -1,0 +1,19 @@
+msManualEdit.dll v1.0
+
+Why this was made:
+There were questions about why an ascii output of their box showed 20 vertices instead of 8. Even though the mystery was solved, I decided that it would be nice to see what the values of the vertices were in MilkShape 3D. Recently the plugin went through a revamp to allow keyboard movement.
+
+The base of the list ctrl comes from:
+http://www.codeproject.com/listctrl/listeditor.asp
+so a thanks goes out to Lee Nowotny for making it.
+
+*Rant*
+If it does not work for some reason then it might have been me changing it to more of my liking. Oddly enough the CListCtrl seems to be one of my more hated objects. Mainly because in report style (aka speadsheet) there does not seem to be an easy way to edit anything beyond the first column. Otherwise I would create the entire thing myself.
+*/Rant*
+
+Notes:
+- It does not allow you to change the uv coordinates.
+- If you edit something then press OK, the edited value will not be saved. Just make sure you press Enter.
+
+--mijacs
+tomijacs@yahoo.com

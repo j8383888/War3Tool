@@ -1,0 +1,59 @@
+Snap plugin for Milkshape 3D
+Version: 1.0.4
+
+---------------------
+Version History::
+---------------------
+
+1.0.4 (25/01-2003):
+
+  Added:
+    The plugin can now snap joints. Please note that this option is disabled by default to avoid screwing with people's animations.
+
+  Changed:
+    Changed the plugin to the 'Tool' type, so it should work fine even if you use Milkshape < 1.6.5.
+
+1.0.3 (13/12-2002):
+
+  Added:
+    I thought it was annoying getting the dialog every time, so I've now done a quick fix that allows you to hold down the Ctrl key while activating the plugin to run the snap directly without seeing the dialog ( only other way I thought of doing it was to make 2 plugins, which isn't very userfriendly ).
+
+1.0.2 (12/12-2002):
+
+  Added:
+    Added checkbuttons for X/Y/Z, if you uncheck one of these, the plugin won't snap on that axis.
+
+1.0.1 (12/12-2002):
+
+  Changed:
+    Fixed a really stupid bug causing the snap to act weird. ( Fixing this actually took longer than writing the plugin in the first place :| )
+
+1.0.0 (12/12-2002):
+
+  Info:
+    First release.
+
+---------------------
+Disclaimer:
+---------------------
+I do not guarantee that this software will function one any certain configuration, and any damage caused by use of this
+software is not my responsibility. Use at your own risk, well, you know the drill :)
+
+---------------------
+Thanks:
+---------------------
+
+  Mete, for the great program, his dedication and helping people out all the time!
+
+---------------------
+Contact:
+---------------------
+Mail me at: taharez@gdnmail.net 
+
+-If you have encountered any bugs/strange behaviour that isn't explained in the above text.
+-If you want to give suggestions for the next release (I really appreciate if you take time to share ideas :) )
+-If you want to have a bit of a chat or any other reason you might think of :D
+
+I hope this plugin can be of use, have fun!
+
+// Taharez

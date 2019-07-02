@@ -1,0 +1,28 @@
+msHideFaces.dll ver 1.0
+
+What does it do?
+Sylacs wanted a plugin that would hide all the front faces. This plugin allows you to do either front or back faces. You will get a dialog asking which viewport you are in and (Sorry, I can not tell.) the choice of hiding either front or back faces. Then they are hidden
+
+Where is it?
+The plugin will appear underneath the Face menu.
+
+Limitations:
+- None
+
+What it can do:
+- Looks through all the triangles and hides the ones that are either front or back faces according to which viewport was selected.
+
+Requires:
+Milkshape 3D 1.6.5
+
+TODO:
+- nothing
+
+History:
+1.0 - Original Release
+
+Note:
+A big thanks to ioquan who told me how to do the checking the proper way.
+
+--mijacs
+tomijacs@yahoo.com

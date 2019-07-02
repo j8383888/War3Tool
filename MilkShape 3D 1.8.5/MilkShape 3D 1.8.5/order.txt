@@ -1,0 +1,76 @@
+                       MilkShape 3D 1.8.5 Order Form
+                       -----------------------------
+
+
+
+Fill in the following information (please write clearly or type) and
+enclose your payment in cash. Coins are not accepted.
+
+* NO checks!
+* NO money orders!
+* NO coins!
+
+NOTE: you only have to fill in the items marked with a '*'!
+
+
+
+Name*____________________________________________________________________
+
+
+Company__________________________________________________________________
+
+
+Address__________________________________________________________________
+
+
+City_________________________ State/Province____________ ZIP_____________
+
+
+Country_____________________________________ Phone/Fax___________________
+
+
+E-mail Address*______________@___________________________________________
+(make sure it is a valid address, otherwise we cannot send you the code!)
+
+
+I use MilkShape 3D for:
+
+[ ] Half-Life  [ ] Quake2  [ ] Genesis3D   [ ] Unreal Tournament
+[ ] Quake III Arena        [ ] Quake       [ ] NOLF       [ ] The Sims
+[ ] Vampire t:MR           [ ] Serious Sam [ ] Max Payne  [ ] A5 GameStudio
+[ ] Viewpoint              [ ] BlitzBasic  [ ] Jedi Knight Outcast
+[ ] Neverwinter Nights     [ ] Lithtech    [ ] Doom 3
+[ ] A6 GameStudio          [ ] Direct X    [ ] Max Payne2 [ ] Torque Engine
+[ ] Half-Life 2            [ ] Alias FBX   [ ] The Sims 2 [ ] COLLADA
+[ ] ASE                    [ ] other:....................
+
+
+License:  Single user license                                  = USD $35.00
+                                                              or EUR  25.00
+                                                                      
+Total:                                                         = USD $35.00
+                                                              or EUR  25.00
+                                                                      
+
+
+
+                                  Signature*_____________________________
+
+
+
+
+
+Mail to:
+
+        Mete Ciragan
+        Fredrikinkatu 14 A 9
+        00120 Helsinki
+        Finland
+
+
+Your registration code will be emailed to you as soon as the letter
+arrives.
+
+If you want to register online using your credit card, then goto
+
+    http://www.swissquake.ch/chumbalum-soft/ms3d/register.html

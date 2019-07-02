@@ -1,0 +1,23 @@
+Milkshape Q3Radiant MAP Export Plug-In (c) 2003 by Jochen Winzen, winzen@online.de
+
+This plug-in is provided as it is, and I take no responsibility for any damage it may cause!
+
+With this plug-in you can easily create .map files for Q3Radiant based editors (GtKRadiant, EFRadiant, ...).
+You load a 3D model into Milkshape and export it to Q3Radiant MAP. Every face of the model will become 
+a 5-sided brush this means all faces are extruded by "Wall thickness" units. Default is -8 so all walls will 
+go inside the model (to preserve surface structure). 1 unit in a Q3 map is ca. 2cm of real world size so 
+you should resize your models (if you used meters scale modelsize 50 times larger).
+
+Materials will preserve their textures in the following way:
+If a material has a texture "floor01.jpg" and you export your model to "mytest.map" the created brushes 
+with this material will reference to "mytest/floor01".
+So you have to copy all used textures (in tga or jpg format only) into a new subfolder "mytest" of your 
+texture path in the MAP editor. Then your map will almost look like your original 3D model!
+This plug-in can't substitute the mapping process but it creates a nice starting point for your own maps.
+
+I hope you like this plug-in.
+
+Jochen Winzen
+
+P.S. I know that some important features (u,v-mapping, no brush overlaps, ...) are missing but maybe 
+someone else has time to write a better plug-in ;-)

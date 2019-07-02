@@ -1,0 +1,18 @@
+Milkshape DOOM3 MD5 Mesh V10 Import Plug-In (c), 2004 sanjo
+
+http://sanjo.myftp.org
+sanjo@hotpop.com
+
+This plug-in for is provided as it is, 
+and I take no responsibility for any damage it may cause!
+
+This plug-in imports DOOM3 MD5 Mesh V10 files.
+Currently there is no support for bones/joints.
+There are some "joint-rotation" conversion problems between 
+the doom3 md5mesh and the milkshape model format.
+
+credits:
+id Software.
+
+Version:
+1.0  initial release

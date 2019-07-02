@@ -1,0 +1,24 @@
+Milkshape TMD Importer Plug-In v1.1 (c) 2001 DragonZap, dragonzap1@aol.com
+
+This plug-in for Milkshape is provided as-is, and I assume no
+responsibility whatsoever for any damage it may cause. It shouldn't,
+of course, but I have to cover all my bases (ARE BELONG TO US!).
+
+HOW TO USE:
+    1. Put the included "msTMDImporter.dll" file in your Milkshape program
+       directory.
+    2. Run Milkshape. You'll find it listed under the "Import" menu.
+
+The plug-in imports Playstation .TMD model files. I've heard they're
+often found on Playstation Underground demo discs, and sometimes hidden
+deep inside data files.
+
+Only meshes are imported. Shading and pigmentation of polygons are not
+supported at all.
+
+As .TMD files can hold multiple models, they will be imported as
+multiple groups.
+
+Version history:
+1.1	- Added support for double-sided polygons and setting up UV maps
+1.0	- Initial release

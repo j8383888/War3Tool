@@ -1,0 +1,20 @@
+Positioning tools plusing for milkshape 3D
+msAlignment.dll
+-------------------------------------------------
+
+Positioning tools is a set of tools that allow for the easy alignment and distribution of selected Vertices, Faces and Meshes.
+
+The Alignment tool lets you align objects relative to either the Origin point (0,0,0), to a specified point or to the selected items themselves.
+
+The Distribution tool lets you distribute the selected objects relative to themselves. You can easily remove the space between objects, even the space between and even specify the spacing. Both of these tools allow for more control over position of objects within Milkshape.
+
+NOTE:
+The sourcecode to this plugin is included in the "source.zip" file which was in the original distribution zip. Please feel free to modify it, use it for your own purposes and to critique it. As I'm not an avid C win32 programmer I ask your understanding for any common mistakes you may find and would be glad for any advice or changes you may make. If you make any changes to this plugin itself (e.g. not a completely new plugin) please let me know so I may update it myself and give you the appropriate credit.
+
+CREDIT:
+I want to thank Rat for all of his help in debugging the various issues that were involved in creating this plugin
+
+This software is presented for free use whether for commercial or non-commercial use.  No warranty is given or implied as to the fitness of this software so use at your own risk.  You may freely distribute this software via any means as long as all files are included with it (dll, helpfile, this text file).  You are not required to distribute the source code with this file.
+
+-sdJunky
+sdjunky@yahoo.com

@@ -1,0 +1,41 @@
+Warcraft III MDX Importer v1.1 for MilkShape 3D by UniKorn - contact@absenceoflight.net
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+This plugin imports MDX models from the game Warcraft III Reign of Chaos & Frozen Throne,
+and convert related BLP Textures to BMP with alpha channel.
+
+Only meshes and materials are supported for now.
+Bones, sequences, materials alphamaps and transparency will be implemented in futur versions ... (maybe !)
+
+What do you need ?
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+The only tool you need is a Warcraft III MPQ Pack Explorer/Extractor, such as WinMPQ (http://www.wc3campaigns.com),
+in order to access the MDX and BLP files of the game.
+
+How does it works ?
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+	1. Simply copy msWar3MDXImporter.dll into your MilkShape 3D root directory and run the program,
+   	   Warcraft III MDX import will be available in the Import Menu.
+	2. Browse to the MDX file you wish to import.
+	3. Set the options : 
+		"Meshes and/or Material import".
+		"Reverse Axis" fit the model to MilkShape 3D axis order.
+		"Copy Textures to MDX Folder" copy the exported BMP textures in the same directory as the MDX model.
+		If not selected, the BLP Textures are converted in their original folder.
+	4. Validate and enjoy the result.
+
+In order to import and convert the BLP textures correctly, you have to respect the original MPQ file tree structure,
+that can be done by extracting the WHOLE package.
+
+Please report bugs, questions, suggestions, love for french people like me and others at contact@absenceoflight.net
+
+Thanks and Credits
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Special thanks to Mete Ciragan, chUmbaLum sOft, for creating MilkShape 3D.
+Very special thanks to TheProphet and KDEWolf for providing a BLP Textures conversion solution
+on "Warcraft III Viewer" - TheProphet@wanadoo.fr - KDEWolf@web.de
+Source code available on e-mail request.
+
+Copyright (C) 2004 Merten BARTHELIER
+contact@absenceoflight.net
+
+

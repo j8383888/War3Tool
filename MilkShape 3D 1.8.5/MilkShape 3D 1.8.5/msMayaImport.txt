@@ -1,0 +1,23 @@
+msMayaImport.txt
+
+Why?
+- Cowsmanaut wanted it.
+
+What does it do?
+- The plugin tries to import Maya Ascii (.ma) files. They need to be triangulated first.
+
+Installing:
+- Put it in your MilkShape folder.
+
+Limitations:
+- Possibly figured out front/back sides.
+- Possibly figured out uv
+- Does not do skeletons or animations yet.
+
+Thanks:
+Wotsit's Format Search for an informative article on the Maya Ascii file.
+http://www.wotsit.org/
+
+
+--mijacs
+tomijacs@yahoo.com

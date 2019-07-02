@@ -1,0 +1,13 @@
+msClean.txt
+
+Why?
+- If you start noticing that you can not extrude properly or other weird issues try this plugin out.
+
+What does it do?
+- The plugin removes all the triangles that have multiple vertices in the same triangle.
+
+Limitations:
+- none
+
+--mijacs
+tomijacs@yahoo.com

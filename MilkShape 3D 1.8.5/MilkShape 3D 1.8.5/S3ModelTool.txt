@@ -1,0 +1,107 @@
+S3ModelTool - By Wesley Howe
+V0.11, 08-Aug-2009
+
+Note: Experimental release, there is no guarantee that
+this will work properly, that is whay it is an experiment.
+This program is covered under license, included in the
+distribution files, the prohibits commercial use and
+distribution restrictions. Your downloading and use of
+the program constitutes acceptance of this agreement.
+
+The objective is a tool set to modify the meshes for objects
+(stereo, car, toys, etc.) for the Sims 3 game. This solution
+is a multi-phase one. To use it as-is, you will need the new
+object cloner from Inge and Peter, MilkShape 1.7.9 up, the
+tools included in the package and some time and attention to
+learn new methods of doing things.
+
+The steps are:
+
+* Make a clone package
+* make a new work directory
+* extract the *.lod and *.model files
+* move them to the work directory
+* run s3modld.exe on each of these files
+* Use the new MilkShape import plugin to import a mesh ".mcfg"
+* Edit your mesh
+* Use the new MilkShape Export plugin to export the mesh ".mcfg"
+* repeat until the meshes are all finished
+* run s3modlc.exe each edited ".mcfg" file
+* copy the *.lod and *.model files back to your clone .package
+* test it.
+
+This process involves the program "s3modld.exe" (Sims 3 Model
+Decompiler) breaking the files into component parts, and creating
+a ".mcfg" file describing it all. You can view the .mcfg file in
+any text editor, but you should not edit it unless you are really,
+really smart.
+
+The importer and exporter plugins use the data in the .s3asc files
+to obtain and update the mesh data (and the .mcfg file).
+
+When editing is done, the "s3modlc.exe" (Sims 3 Model Compiler)
+must be run on each .mcfg file. It reads the data in that file,
+and uses it as a guide to repackage all of the blocks into a .model
+or .lod file. .model files are .lod files with an extra block in
+them.
+
+Some general notes on usage:
+
+Associate the .lod and .model file extensions with s3modld.exe, and
+you can just double click on them after copying to your project
+workspace to create the project files. Alternatively, if you run
+the programs directly, cd to the directory and preface the filename
+with ./
+
+Associate the .mcfg file extension with s3modlc.exe and you can
+just double-click on the file to recompile your .lod or .model file.
+
+Note that the ".mcfg" files are created by the model decompiler.
+I personally use these two programs by associating them with the
+file types, so all I need to do is double-click on them in
+Windows Explorer.
+
+Any of the Sims 3 .package managing programs should work for
+extracting and repackaging. I use my s3chop and s3pack tools,
+but perhaps that is because I had them from the beginning.
+
+You place the MilkShape plugins in the usual place, your MilkShape
+program installation directory.
+
+In what I have done testing here, there are generally 1 .model file
+and 3 .lod files in an object. But not always, some files have ony
+a single .model, or one .model and one .lod. The group value seems
+to be named using a convention where "00000000" is the largest LOD
+(level-of-detail) and "00000001" is the smaller one. These two
+lods appear to be reused in groups "00010000" and "00010001", but
+those are fully welded and less detailed version. These are
+generally offset vertically and horizontally, and it appears they
+are used to create a groundshadow.
+
+If you don't change the LODs other than "00000000", if they are
+defined, you will get an object that looks and works fine, until
+it is seen at a distance.
+
+The documentation is sparse, this will develop. Please do npt
+complain about stuff that doesn't work, instead make careful
+notes about the problems so I can fix them. Example files and
+screenshots are a bonus... if I have to start from scratch to
+reproduce your problem, then that is time I cannot spend fixing
+issues.
+
+Remember, No Pay, No Diva.
+
+History:
+V0.12: 10-Aug-2009: Restored lost fix for normals that flipped.
+V0.11: 08-Aug-2009: Reverted UV scaling back to pre-V0.09 value.
+V0.10: 07-Aug-2009: Revised to use .s3asc files for mesh data.
+V0.09: 06-Aug-2009: Changed UV compression scaling.
+V0.08: 04-Aug-2009: Increased buffer limits.
+V0.07: 03-Aug-2009: Fixed error exporting default 8-byte vertex (0x5003 block).
+V0.06: 02-Aug-2009: Fixed assignment import problem. Increased size limits.
+V0.05: 01-Aug-2009: Fixed some normals flipping. Added seam (UV)
+                    splitting. Added scan for unassigned bones.
+V0.04, 29-Jun-2009: Fixed bug in VPXY field from decompiler for some MODLs.
+V0.03, 29-Jun-2009: Fixed problem caused by earlier fix.
+V0.02, 29-Jun-2009: Added code to manage welded seams on export
+V0.01, 28-Jun-2009: Initial release

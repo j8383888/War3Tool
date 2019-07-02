@@ -1,0 +1,105 @@
+.s3asc (Sims 3 Ascii) format
+Wesley Howe - 07 Aug, 2009.
+
+The purpose of this format is to provide a simpler interface to
+the format used for the Sims 3 game object mesh files (*.model/
+*.lod). The file is an editable text format, and is organized
+in a linear manner, one file per group. The s3modld.exe (modl/mlod
+decompiler) utility generates these files, and the s3modlc.exe
+(compiler) utility compiles these files into the appropriate
+blocks and compiles all the others into a complete .model/.lod
+file.
+
+There are 4 sections, vrtf (vertex format), skin (joint definitions),
+vbuf (vertex buffer) and ibuf (index buffer) and all are
+required, in order. Additionally, comment lines may be embedded by placing
+the ";" (semi-colon) as the first character, or by adding text
+offset by at least one space after the final required parameter
+on any line. By convention, these comments should also begin with
+the ";" character. There should be no blank lines; if not a
+comment, then a valid line is expected.
+
+vrtf is the first section, and specifies the flexible vertex format
+used for this group, using values defined by the game. The first
+line is always:
+
+vrtf x y
+
+where x is the number of vertex elements and y is the total vertex size
+(in bytes). Following this line will be x lines of vertex formatting:
+
+a b c d e 
+
+where:
+a is a zero based sequence number.
+b is the vertex element type: 0 = position, 1 - normal, 2 = UV, 3 = bone
+   assignments, 4 = skin weights, 5 = tangent normals, and 6 is an unknown
+c is the zero-based sequence, for exaample there may be two UV sets, the second
+   set will have a sequence value 1
+d represents the compression type, 7, 6, 5 and 4, to be used by the compiler
+e is the offset of the start of the field, agaib ti be passed to the compiler
+
+Here is an example section:
+
+vrtf 3 16
+0 0 0 7 0
+1 2 0 6 8
+2 1 0 5 12
+
+This describes a vrtf with three elements and a total size of 16 bytes.
+The first element is position, compresses using method 7, and is at offset 0
+The second element are UVs, compressed using method 6, and is at offset 8
+The third (and last) entry are normals, compressed using method 5, at offset 12.
+Since the size of the last elements will be 4 bytes compressed, 12 + 4 = 16,
+the vertex size
+
+The next section is the skin section (for the joints). It appears below;
+
+skin n
+
+where "n" is the number of joints defined for this group. A 0 means there
+are no joints defined. Any positive value there will cause that number
+of lines of bone definitions to be expected. Here is a sample entry:
+
+0 CD68F001 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000
+
+The first element is a zero-based sequence number (used to detect synchronization issues).
+The second is the Hash32 that the joint is known by. The remaining 12 elements are 12 
+floating-point values that define the position and rotation of the joint in a 4x3 matrix.
+
+Next comes the vbuf section, it starts with this:
+
+vbuf n
+
+where n is the total number of vertices in the group. Tereafter, there will be "n" lines
+of vertex data, arranged per the flexible vertex formatting in the first section.
+Some example lines:
+
+0 0 0.076172 0.789063 -0.419922
+0 2 0.779735 0.020264
+0 1 -0.501961 -0.501961 -0.501961
+1 0 -0.076172 0.789063 -0.419922
+
+The first three lines begin with zero, and are associated with vertex 0. The last line starts
+with 1, and is the first entry of thr next vertex. The second digit on each line is the element
+type (position, UV and normal in this example). You will see three floating point values on
+the first line, those are the X, Y and Z coordinates (the position).
+The second line has two floats on it, these are the two UV coordinates.
+The third like has three floats, those are the normals.
+The bottom line is the first line of the next vertex, its three floats are a position value.
+
+The final section is the ibuf, which contains the vertex indices for each polygon (triangles
+only). It begins with:
+
+ibuf 4
+
+Which indicates there are 4 faces in the mesh. Four lines will be expected to follow, numbered
+from 0 to 3 in the first position. There will be three additional numbers on each line, those
+are the vertex indices for each face.
+
+0 0 1 2
+1 2 1 3
+2 4 5 6
+3 6 5 7
+
+Any text beyond the last face line will be ignored.

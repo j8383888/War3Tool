@@ -1,0 +1,265 @@
+*****************************************
+* General Map Exporter for Milkshape 3d
+*      by Rick J. Kelley AKA Rat 
+*              8-16-04 
+*            Version 2.2
+*****************************************
+
+This is a little something I have worked on for a bit that never quite worked as
+hoped for. I dusted off the idea just recently when I thought of another way
+to get a map exporter working.
+
+I have included two map examples, one for Quake and Half Life testing, called
+WorldcraftMAPtest.ms3d and one for Torque called TorqueMAPtest.ms3d. These were
+tested pretty much and would export/import without errors. I have noticed that
+the Quark map editor will sometimes give some extra planes with the different
+versions of Quark out there. This is nothing really bad if this happens to you,
+ as you can just delete the extra faces, and get on with life :D
+
+There are a few things to keep in mind in its present form. Its certaintly far from
+being done! For complex shapes it may cause the shape to look wierd when you
+open it up in WorldCraft, (Havn't tried Hammer out yet), as I need to figure out
+a better parsing routine. The Map format is a bit weird as its brushes are formed
+by 3 vertices per side, no matter how many points the side seems to have. All the
+sides have to be taken as a whole to form the brush. At present, some of the
+geomety may appear to be in a simpler form than they were in the Milkshape
+program. (A good example of this is the hemisphere that is in the window, it may
+have fewer triangles when its exported, than it did in Milkshape. This depends
+on how it was constructed and how the math behind it will decide on what is a
+plane to keep).
+
+To use this exporter as is right now, study the ms3d file I have included to
+see what proper brushes should look like for the cylinders, and hemisphere shapes.
+
+You may notice that I have a working way to export the light entity. To do this,
+you need to name the first part of the object "light" and give it a material that
+also is named "light." To add more than one light, just name your lights light01,
+light02, and so on. (Take a look at the ms3d file for examples).
+
+Also there is a glass feature in this version that will become see through in the
+map export. I arbitrarly set this to 160 render amount right now and in the
+future may add a way to input this by using the emmisive setting in Milkshape.
+To use this feature, you will need to create an entity by making a box and naming
+the first part of the object "glassb1." (The b1 at the end means that I am going
+to expand the glass types later on). This will make this a brush that becomes
+breakable and see through. To make more than one glass pane in Milkshape, just
+name your glass like I did in the example glassb101, glassb102 and so on. (Perhaps
+later I will add other glass types that have different breakable strengths if
+requested).
+
+Added func_door and trigger_hurt entity parse. To use these new features:
+Doors: make a box and name it one of 6 types by the below names.
+	doorup		this is for a door to open upwards.
+	doordn		this is for a door to open downwards.
+	doorN		this is for a door to open to the north or 90 degrees.
+	doorS		this is for a door to open to the south or 270 degrees.
+	doorE		this is for a door to open to the east or 0 degrees.
+	doorW		this is for a door to open to the west or 180 degrees.
+	These created doors will open with a speed of 100 and a wait time of 4
+
+trigger_hurt: make a box and name it trigger_hurt and it will have a default
+setting of 10 for damage.
+
+:::
+TORQUE MAP EXPORT ADDITION TO PLUGIN 8/15/04
+:::
+
+This portion deals with the export to the Torque Map export. This was created in
+request for a Torque Map exporter, since I already had made one for a general map
+exporter for quake type engines, so its just an addition.
+
+The thing to remember whenever your getting ready to import within the Quark
+editor, is to set the game to Torque and the Map type to 220. See the Quark
+manual on how to do this.
+
+This exporter now includes support for 9 light types:
+light_omni
+light_spot
+light_emitter_spot
+light_emitter_point
+light_runway
+light_flicker
+light_strobe
+light_pulse
+light_pulse2
+To set the light color, you can use the Diffuse color of the material. To have
+a white or bright color, set the rgb values to 255. At present it only will set
+color, or color1 of each light entity. I may change this later since Milkshape
+has 3 other material channels, if there I get feedback on this.
+
+It also includes for 4 different types of brush-based entities pecular to Torque:
+portal
+detail
+collision
+vehicle_collision
+
+Special entities to the Torque map have been also included:
+MirrorSurface
+target
+trigger
+Door_Elevator
+Force_Field
+Path_node
+Path_start
+ai_special_node
+
+There are a few things to keep in mind in its present form. Its certaintly far from
+being done! I eventually want to figure out texture scaling and rotation, as at
+present, none is done. It is left up to the user to do this in the editors that
+can handle the math behind this, as it seems to be obscure and unshared to the
+community.
+
+
+KNOWN BUGS
+=====================================================
+
+If you do not assign a material to the object or group, it may cause milkshape
+to crash. So for now just assign some material to all things you want to export.
+
+I have had it reported that if your testing skeltal models in Milkshape3D and
+forget to remove the skeleton before exporting to MAP format, it may cause
+the map not to load in a editor like Hammer, Worldcraft or gtkradient. I have
+tested and seen that this does indeed cause a problem, but cannot figure out
+why this is so. Looking at the text output it creates, shows nothing wrong
+with the generated MAP file. It may be that it is messing up the vertices for
+the brushes. So for now I am just warning you of this problem, Delete the
+skeleton, save the ms3d file, and reopen it then export it, and it should be
+fine.
+
+CREDITS
+=====================================================
+
+CCCP for his help on how to get specific information on the material parse.
+jonahcomplex for his help on how to add specific information for the Torque
+MAP information.
+
+
+
+TESTERS
+=====================================================
+
+Sylacs Thanks man for pointing out the gtkradiant error!
+Mijacs Thanks for making sure it works in Hammer as I didnt want to install it!
+DarthBobo Thanks m8 for help on the problem I had with the project setting.
+jonahcomplex Thanks for the help on testing the Torque portion of this plugin!
+
+=====================================================
+History
+
+Version 2.2 Release 8-16-04
+
+Added Torque MAP export and changed how the plugin exports by having options
+to export to specific MAP types of Quake 3, Half Life (WorldCraft/Hammer editor),
+and Torque MAP options.
+
+-------------------------------
+
+Version 2.1 Release 8-14-04
+
+Noticed a slight bug in text output, and fixed it so editors wont complain
+of improperly formed brush lines.
+
+-------------------------------
+
+Version 2.0 Release 8-13-04
+
+Rewrote the parse routine for brush planes. Seems to work better for complex
+brushes.
+
+-------------------------------
+
+Torque MAP Version 1.3 Release 6-21-04
+
+Changed how the exporter parses the mesh objects to convert them into csg brushes.
+The exporter should now correctly export more complex brush types that fall within
+the descriptions of proper csg brush elements.
+
+-------------------------------
+
+Torque MAP Version 1.2 Release 6-10-04
+
+Added support for Special entities:
+MirrorSurface
+target
+trigger
+Door_Elevator
+Force_Field
+Path_node
+Path_start
+ai_special_node
+
+-------------------------------
+
+Torque MAP Version 1.1 Release 6-10-04
+
+Changed how the exporter will export light color values for the light entities.
+
+-------------------------------
+
+Torque MAP Version 1.0.1 Release 6-9-04
+
+Fixed a minor problem as was informed of how Torque type Maps need some extra
+information included that other MAP format do not seem to need. Included a 
+example MS3D file for export to demonstrate how to create brushes in
+Milkshape 3D. Put in support for brush based entities:
+detail
+collision
+vehicle_collision
+portal
+
+-------------------------------
+
+Torque MAP Version 1.0 Release 6-8-04
+
+Export of Torque MAP format for Level editing/building in Milkshape 3D.
+Supports 4 light entities: light_omni, light_pulse, light_strobe, light_spot.
+
+-------------------------------
+
+Version 1.4 Release 3-18-04
+
+Fixed some loading problems discovered by users. Included a better example
+MS3D file for texting export and to demonstrate how to create brushes in
+Milkshape 3D.
+
+Added func_door with 6 types of doors to open in all 6 directions.
+
+Added trigger hurt with a default of 10 damage.
+
+-------------------------------
+
+Version 1.3.1 Release 4-20-03
+
+Fixed a problem that was not allowing for the map load in gtkradient.
+
+Fixed the bug where upon loading the map into worldcraft or Hammer it would
+cause a pop up message of an error that was blank.
+
+-------------------------------
+
+Version 1.3 Release 4-19-03
+
+Fixed material support to give texture names for the exported brushes so you
+dont have to put the textures on in the map editor of your choice.
+
+Added Deathmatch entity support.
+
+Added breakable glass support with a see through value of 160 render amount.
+
+-------------------------------
+
+Version 1.0 Release 4-17-03
+
+Export of  Generic MAP format for Level editing/building in Milkshape 3D.
+Supports light entity placement.
+
+SHAMELESS PLUG!
+=====================================================
+
+If you would like to see future additioins, please feel free to email me
+at rat@drawcad.com or rickjkelley@yahoo.com as I check both.
+
+I am interested in plugin creation and can be hired out for work for
+game development, or art work as in modeling, level building, concept,
+or other art forms. Please contact me and I can supply a viewing of
+my work.

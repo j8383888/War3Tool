@@ -1,0 +1,45 @@
++-------------------------------+
+|  BF1942 MILKSHAPE 3D PLUGINS  |
++-------------------------------+
+Two files:
+
+msRf2Importer.dll
+msRF2Exporter.dll
+
+The plugin is still in development and has only been tested mildly.  
+
++-------------------------------+
+|         INSTALLATION          |
++-------------------------------+
+Place msRF2Importer.dll and msRF2Exporter.dll into your main Milkshape directory.
+
++-------------------------------+
+|            USAGE              |
++-------------------------------+
+IMPORT:
+
+The plugin will only import collision meshes.  To import these collision meshes, click File->Import->Refractor2.  Click the .sm file with the collision meshes you would like to view.  NOTE: IF THE FILE DOES NOT HAVE ANY COLLISION MESHES, NOTHING WILL BE LOADED INTO MILKSHAPE.
+
+EXPORT:
+
+The plugin exports collision and visible meshes.  However, it only exports a single level of detail (at this time).  Select one or two meshes as your collision mesh using the designated combo list box.  You can select 0, 1, or 2 collision meshes.  You do NOT need to select a visible mesh.  All mesh groups not designated as collision meshes will be exported as a visible mesh.
+
+Each visible mesh needs to have a material assigned to it.  The plugin will create a skeleton .rs file, but you will most likely need to edit to have it behave correctly.
+
+You can also select a material id to be assigned to all entities in the .sm file.  At this time, you can only assign the same MatID to all entities.  IF you don't change the matID, it will use 0.
+
++-------------------------------+
+|             BUGS              |
++-------------------------------+
+Please e-mail me input at brian@holinka.org.
+
+
+
+
+
+
+
+
+
+
+Dedicated to the women and men of the Unites States Armed Forces.  God bless.

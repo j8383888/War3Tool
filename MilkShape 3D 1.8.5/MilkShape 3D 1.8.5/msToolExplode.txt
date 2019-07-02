@@ -1,0 +1,24 @@
+Explosion plugin for MilkShape 3D.
+msToolExplode.dll 
+Tested with: MilkShape 3D 1.6.5
+-------------------------------------------------
+
+This plugin splits a model into individual triangles, adds a bone to each triangle and adds a keyframe 
+to each bone. It basically sends the triangles spinning away from the center of explosion.
+
+How to use:
+Copy msToolExplode.dll to your MilkShape home directory and restart MilkShape. Under the "Tools" menu, 
+select "Explode".
+
+Limitations:
+- There are max 128 bones allowed in a scene, so max 128 triangles can be animated. I tried to assign 
+several triangles to each bone, but that didn't look very good. Still looking for a workaround.
+- All triangles in the exploded mesh are flat. Haven't figured out a way to retain normals from a 
+smoothed mesh when the vertices are unwelded.
+
+This software is freeware. I'm not exactly sure what subtle legal meanings that has, but the point 
+is: Do whatever you like with it, but don't claim you wrote it. If you redistribute it, please make 
+sure all files are included. Use at on your own risk; if it eats your computer, don't blame me;).
+
+--Ulf Öhlén
+ulf_ohlen@hotmail.com

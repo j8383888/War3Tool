@@ -1,0 +1,72 @@
+
+BVH (BioVision Hierarchy) Importer for MilkShape
+================================================
+
+Copyright (C) 2001 Keith Harrison
+keithh@scitechsoft.com
+
+Use at your own risk!
+
+NOTE
+----
+This plugin is Shareware, but it is not crippled in any way, and will not time-out. If you find this plugin useful and it meets your needs then you should register on the following secure server:
+
+https://www.regnow.com/softsell/nph-softsell.cgi?item=5291-2
+
+Your registration will help support further development on this and other MilkShape plugins. Thank you.
+
+Overview
+--------
+This importer is designed to import the skeleton (bone structure) and/or motion capture data contained within BVH files into MilkShape. Multiple BVH files can be loaded to make a long sequence of animations.
+
+NOTE: The BVH files supplied should be assumed to be for demo purposes only. The expection to this are the BVH files beginning with "kh_", which were created by myself in Poser 3 (at MilkShapes default 24fps). [Hopefully the MilkShape community will get together and pool BVH files.]
+
+Usage
+-----
+
+Note: The scale factor effects the skeleton *and* the motion data.
+
+A. Importing the skeleton and motion data from a BVH file
+   ------------------------------------------------------
+   1. Click on the ">>" button to choose a .bvh file.
+   2. Choose a scale factor (or leave as default).
+   3. Click OK
+
+B. Importing just the skeleton from a BVH file
+   -------------------------------------------
+   1. Click on the ">>" button to choose a .bvh file.
+   2. Choose a scale factor (or leave as default).
+   3. Make sure that "Import Motion Data" is unchecked.
+   4. Click OK
+
+C. Importing motion data from a BVH file (after importing a skeleton)
+   ------------------------------------------------------------------
+   1. Click on the ">>" button to choose a .bvh file.
+   2. Choose a scale factor (or leave as default).
+   3. Make sure that "Import Skeleton" is unchecked.
+   4. Choose the frame number to start importing frames to.
+   5. Click OK
+
+Example: If you have two BVH files, each containing 24 frames of animation, you would import both skeleton and motion data from file 1, then import just motion data from file 2, specifying Frame 25 as the first frame to import the motion capture to. MilkShape will then have 48 frames of animation. Make sure that both BVH files have the same skelton hierarchy though!
+
+Issues
+------
+1. When loading only motion data, joint names in the BVH file must match the pre-existing bone names.
+2. Some BVH files don't quite animate properly in MilkShape (such as dance01.bvh). The importer converts rotations to quaternions, then converts back to Euler angles to supply the data to MilkShape, but keeping to Euler angles internally still doesn't cure this.
+3. Motion data won't attach to Valve skeleton supplied with MilkShape! :(
+4. DON'T MOVE THE SKELETON!! Scale and move your mesh to fit the default pose instead of moving the bones. If you move the skeleton, the animations won't match up.
+
+Feedback
+--------
+Send feedback to keithh@scitechsoft.com
+Anyone need a MilkShape BVH Exporter? I'll write one if there's sufficient need...
+
+Version History
+---------------
+1.00 Initial Release
+1.01 Now linking MFC as a static lib, so end-user doesn't require any extra dll's.
+1.02 Added support for BVH files exported from Animation Master.
+
+==========================================================
+All Trademarks are the property of their respective owners
+==========================================================

@@ -1,0 +1,20 @@
+msRotateAll.txt
+
+Why?
+- Sylacs wanted it.
+
+What does it do?
+- The plugin rotates the mesh and joints for the entire animation.
+
+Requires:
+- Milkshape 1.6.5 +
+
+Installing:
+- Copy the dll into the MilkShape 3D directory.
+
+Limitations:
+- none
+
+
+--mijacs
+tomijacs@yahoo.com

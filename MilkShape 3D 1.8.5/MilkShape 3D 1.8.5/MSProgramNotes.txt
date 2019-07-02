@@ -1,0 +1,204 @@
+16-Sep-2009
+Version 0.15
+Wesley Howe
+
+Program notes for:
+
+"Q-Mesh Sims 3 GEOM Importer Vn.nn - by Wesley Howe" (body meshes).
+"Q-Mesh Sims 3 GEOM Exporter Vn.nn - by Wesley Howe" (body meshes).
+"Sims3 Extra Data Tool Vn.nn - by Wesley Howe" (VertexID and TagVal editor)
+Where n.nn is the version number.
+
+NOTE: This version requires release 1.8.5 of MilkShape.
+
+This release requires MilkShape version 1.8.5. Support for the TagVal items
+used in hair meshes and faces (to control color channels per-vertex) requires the
+new version of MilkShape.
+
+Installation for all MilkShape plugins consists of unzipping the file and placing it
+in the MilkShape program folder. It you used the installation defaults, this will be
+"C:\Program Files\MilkShape 3D 1.8.5" or, on Vista 64-bit it will be
+"C:\Program Files (x86)\MilkShape 3D 1.8.5".
+
+After placing the plugin in the program directory, close (if you are using MilkShape) and
+restart the program. Plugins are searched for only when the program starts up. If you
+put this in the right place, you will find a new entry in the File->Export or File->Export
+labelled as lised above.
+
+================  Sims 3 files  =======================================
+
+As used in the game, all of the game items are named with 4 numbers, and packaged in a file
+with the extension .package using version 2 of EA's DBPF format. This plugin knows nothing
+about the package files themselves, it works only with files already extracted from a
+package file. Details on using a package file program are not included here.
+
+The extracted files are named following a scheme in which the 4 numbers from the package,
+the type [TID], group [GID], instance_hi and instance_lo [IID] (which are combined into a
+64-bit single number) are converted to hex digits. You don't have to know any more details
+about this process, although they are documented elsewhere. The layout of a name
+looks like this:
+
+S3_015A1849_00A0A12D_0000000098ABE74D_GEOM.simgeom
+S3_00AE6C67_00A0A12D_00000000B9DEE910_BONE.skcon
+
+The layout of the names is such that each filename should be unique. For many types, the
+last 4 characters will be an acronym for the type value, and the file extension will
+be created such that various tools (including paint programs) will recognize those that
+they understand. This importer program understands the GEOM .simgeom (sim body mesh
+files), and the BONE .skcon (skin controller) files.
+
+Programs that extract these files include the bulk file tool s3chop, Postal and the
+S3PI tool, and for meshes the CTU tool.
+
+Inside the GEOM file is a reference to the appropriate BONE file for that mesh. The BONE
+file includes, as you would expect, the information on where the joints for the mesh
+should be placed, while the GEOM file itself contains the mesh and the assignment and
+weighting information that allows the mesh to be deformed properly for animation.
+
+While the plugin itself can follow the reference inside the GEOM file to look for the
+correct BONE file, the methods to determine which BONE goes with which GEOM is
+external to this plugin. If the BONE file is not found, it will tell you, and list
+the filename it was looking for, but you will need to locate and extract that file
+and then run the importer again to adjust the bones locations to match the mesh design.
+As you would expect, meshes for adults and children are different sizes. Lacking the
+correct BONE file, the importer will use a default adult skeleton, if the mesh is
+one for a child, this will be wildly mis-sized.
+
+GEOM files only contain a single group, and a full body mesh will consist of a hair
+mesh, a face mesh, either a full-body or separate top/bottom meshes, a feet mesh and
+possibly several body morph meshes. These meshes can be imported overtop each other.
+The importer will issue a warning when it is used and any mesh is already loaded,
+because the process of building a complete sim mesh will not work if the files are
+mixed between different meshes or multiple of the same parts are loaded. When working
+with morphs, the base mesh must be the first loaded group, including for export.
+
+Further complicating the process is that multiple LOD (less detailed versions) exist
+for each mesh. Further information on how the game arranges these files will be posted
+elsewhere, as they are discovered.
+
+Like the predecessor Sims 2 UniMesh plugins, Q-Mesh understands morphs and can load
+them, however in Sims 3 these morphs are separate files from the base body mesh, and
+only the morphs that match the base mesh can be loaded, and then only after the base
+mesh has already been loaded. In the base and body meshes the entire face list and a
+VertID exist for each vertex, and these all must match before a morph import will
+finish. Altered morphs do not work in the game until a new BGEO file has been
+created (seperate tool and process).
+
+================  Animation  =======================================
+
+Meshes can be imported and can be animated within MilkShape to check assignments and
+skin weighting or just to pose the mesh.
+
+================ Comments =============================================
+
+The importer creates a set of comments for each group to remember some specific
+mesh related data that will be used later together with the mesh itself to rebuild
+a GEOM package. While the exporter plugin needs more game testing before it can
+be released, a typical set of comments is shown below:
+
+FVFItems: 7
+References: 4
+TGIRef00: 00B2D882 00000000 BD1CB80A 22C4F88D
+TGIRef01: 00B2D882 00000000 BD1CB80A 22C4F88E
+TGIRef02: 00B2D882 00000000 BD1CB80A 22C4F890
+TGIRef03: 00AE6C67 00005323 00000000 580AEA00
+
+The FVFItems value will be either 3 (a morph) or one of 6, 7, or 8. The values six is
+a complete mesh, but lacks VertID or TagVal data (more on these later). Type 7
+has a VertID (vertex id number) and type 8 has both a VertID and the TagVal (purpose
+uncertain, but appears to be related to applying vertex colors). Each VertID will
+be unique for each vertex across all parts of the entire mesh, while the TagVal data
+is applied to multiple sets of vertices. More research on this is required, and
+no simple tools exist to modify the values. But the importer can read these, and
+stores them in the imported mesh, and MilkShape saves them in the default save
+file format (.ms3d).
+
+The References value is the count of items from a table in the original file, and the
+following number of items is retained. Each set of values are type, group and instance
+(hi and lo) of those used in a file that supports the mesh. Type "00B2D882" are the
+textures (in .dds format) and type "00AE6C67" are the referenced BONE file. Fom the
+values for the BONE file, the expected filename is built and searched for on import.
+
+Additionally, for base meshes (FVFItems: count 6, 7 or 8) there will be additional
+data in the comments section:
+
+EmbeddedType: 548394B9
+EmbeddedSize: 308
+EmbeddedLong000: 464E544D
+EmbeddedLong001: 00000000
+   ...
+EmbeddedLong076: 00000000
+
+Actual data may vary. This is a special data section, an embedded MTNF block, which is
+not currently editable. The data is stored and carried over on export. Without this
+data, meshes do not work or may crash the game.
+
+Locating the necessary meshes to modify is at present a difficult process. However, in
+each SIMO file the .xml data refers to the various mesh parts by name, after the tag
+daefilename. An example:
+
+afShoesSandalLowFlatNatural00_sandalLeather_lod1
+
+This is the first most detailed level-of-detail (_lod1) of the adult female (af) Sandal
+and would be located in FullBuild0.package, where the other game mesh files are to
+be found.
+
+In FullBuild0 is a namemap (_KEY) file that contains the names and Quad Word (64-bit)
+instance IDs of the items. The file layout is:
+
+QWORD InstanceID
+DWORD name_length
+[varies] name characters.
+
+The QWORD is written typical little-endian (Intel) style, where the bytes run from
+least-to-most, so you have to reverse the order to read the number. The mesh name will
+then have those 8 bytes (26 hex characters) in the IID of the name (see filename
+explanation previously detailed).
+
+From whatever point you arrive at the decision of which mesh to modify, you import
+that mesh. The importer will attempt to locate the correct extracted BONE file to
+work with, and will set a warning if it is not found. In that case, the import
+still happens, but a default adult skeleton is used, which can look pretty funny when
+it is overlaid with a child clothing item. Until you loacte and can import with the
+correct BONE file, there is some chance that an exported mesh will not fit in the
+game properly, and that out-of-game animations of the mesh will be off.
+
+After mesh changes, you use the export menu and export your newly modified mesh. This
+file should be then renamed following the original TGI values, repackaged, and placed
+in your mods/Packages directory, or renumbered using other tutorial methods. It will
+then override the original mesh shape in the game if defined as a replacement (same
+numbers) or can be a part of a non-replacement package. Some meshes are gender/age
+specific, while others are more generic. For example, the
+amAccessoryGlassesAviator_lod1 mesh is used for both male and female adults and
+young adults.
+
+Extra Data:
+
+The Extra Data tool edits additional data found in some Sims 3 meshes. These items
+are the VertexID, a unique value for every vertex, used to match the base and morph
+mesh vertices, and the TagVal, found in hair (and face) meshes. The TagVal is split
+into four separate bytes, with a resulting value range from 0 to 255.
+
+The essentials of the tool are that you select one or more vertices, and edit the
+values. Within your selection, you step forward and backward with scroll arrows,
+while the current values are displayed. If you want to change a value, you make
+the change to those displayed for the current vertex, and click the "commit"
+button to effect the change. Under each byte of the TagVal data is a button that
+says "To All". Clicking that copies the byte (0, 1, 2 or 3) to all of the same
+numbered bytes in teh selection.
+
+When you have all the changes you want completed, you click on "Save All" to
+place them into MilkShape, or Cancel to reject the changes.
+
+
+Change log:
+
+V015, 08 July, 2009 - Removed defective vertex splitting code.
+V014, 08 July, 2009 - Added support for TagVal, requires MilkShape 1.8.5
+V012, 24 June, 2009 - Revised morph file generation, include base skeleton
+V011, 23 June, 2009 - Added missing comments in morph imports.
+V010, 02 June, 2009 - Initial release.
+
+************************************************************************************
+Credits: Special thanks to Atavera, Delphy, Inge, Karybdis, Pescado and Rick, and
+unnamed.

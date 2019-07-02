@@ -1,0 +1,273 @@
+<html><body>
+<h2>msToolJS scripting plugin for MilkShape3D</h2>
+By Ulf Öhlén<br>
+ulf_ohlen@hotmail.com
+<h3>Overview</h3>
+This plugin provides JavaScript support for MilkShape 3D 1.6.*. It wraps the MilkShape SDK in a hierarchy of JavaScript objects that can be manipulated with scripts. 
+<br><br>
+The purpose of this plugin is to make it easier to add custom behaviour to MilkShape, without going through the process of writing a plugin. JavaScript is normally considered a far less complex language than C/C++. Also, no compiler is needed. However, the support for custom UIs is at the moment quite limited.
+<br><br>
+This document is only intended as a quick reference to the object model used. For info on the JavaScript language and standard objects, please refer to a JavaScript manual. See the samples for an example on how to use the plugin. I suggest reading the Report.js sample, as it makes use of the entire object hierarchy.
+<br><br>
+
+<h3>Installation</h3>
+Copy these files to your MilkShape directory:
+<table border=0>
+<tr><td>- msToolJS.dll</td><td>&nbsp;</td><td>The plugin</td></tr>
+<tr><td>- msToolJS.htm</td><td>&nbsp;</td><td>This file</td></tr>
+<tr><td>- js32.dll</td><td>&nbsp;</td><td>Mozilla's JavaScript engine (SpiderMonkey)</td></tr>
+<tr><td>Samples (optional):</td><td>&nbsp;</td><td></td></tr>
+<tr><td>- JSSamples\Report.js</td><td>&nbsp;</td><td>Creates a report of the model</td></tr>
+<tr><td>- JSSamples\Spikey.js</td><td>&nbsp;</td><td>Converts each triangle into a spike</td></tr>
+<tr><td>- JSSamples\Unweld.js</td><td>&nbsp;</td><td>Unwelds the vertices in the model</td></tr>
+<tr><td>- JSSamples\Tetraeder.js</td><td>&nbsp;</td><td>Creates a new tetraeder mesh</td></tr>
+<tr><td>- JSSamples\Octaeder.js</td><td>&nbsp;</td><td>Creates a new octaeder mesh</td></tr>
+</table>
+<br>
+The plugin will also create this file when executed:
+<table border=0>
+<tr><td>- msToolJS.ini</td><td>&nbsp;</td><td>Plugin settings</td></tr>
+</table>
+
+<br>
+<br>
+<table border=0 width="100%" align="top">
+<tr><td colspan=2><h3>Global stuff</td><td></td></tr>
+<tr><td><b>Global objects</b></td><td><b>Type</b></td><td><b>Description</b></td></tr>
+<tr valign="top"><td>model</td><td>Model</td><td>The one and only Model instance. Changes to this object will show in MilkShape.</td></tr>
+
+<tr><td>&nbsp;</td></tr><tr><td><b>Constants</b></td><td><b>Type</b></td><td><b>Description</b></td></tr>
+<tr><td>eSelected</td><td>int</td><td>Selected flag</td></tr>
+<tr><td>eSelected2</td><td>int</td><td>Selected flag (?)</td></tr>
+<tr><td>eHidden</td><td>int</td><td>Hidden flag</td></tr>
+<tr><td>eDirty</td><td>int</td><td>Dirty flag</td></tr>
+<tr><td>eAveraged</td><td>int</td><td>Averaged flag</td></tr>
+<tr><td>eUnused</td><td>int</td><td>?</td></tr>
+
+<tr><td>&nbsp;</td></tr><tr><td><b>Functions</b></td><td colspan=2><b>Description</b></td></tr>
+<tr><td>write(message, ...)</td><td colspan=2>Writes one or more values to the console.</td></tr>
+<tr><td>writeln(message, ...)</td><td colspan=2>Writes one or more values to the console. Ends with a new line.</td></tr>
+<tr><td>clearConsole()</td><td colspan=2>Clear the console.</td></tr>
+<tr><td>alert(message)</td><td colspan=2>Displays a messagebox</td></tr>
+<tr><td>confirm(message)</td><td colspan=2>Displays a confirmation dialog box</td></tr>
+<tr><td valign="top">showOpenDlg(dialogTitle, filter, initialDir, <br>defaultFile, defaultExt)</td><td colspan=2>Displays a file open dialog. Returns the file path or null if cancelled.<br>Example: showOpenDlg("Open File", "Text|*.txt||", "C:\\Blask", "Default.txt", "txt")</td></tr>
+<tr><td valign="top">showSaveDlg(dialogTitle, filter, initialDir, <br>defaultFile, defaultExt)</td><td colspan=2>Displays a file save dialog. Returns the file path or null if cancelled.<br>Example: showSaveDlg("Save File", "Text|*.txt||", "C:\\Blask", "Default.txt", "txt")</td></tr>
+<tr><td>prompt(message, default, title)</td><td colspan=2>Displays a dialog that prompts the user for a string.</td></tr>
+<tr><td>gc()</td><td colspan=2>Runs the garbage collector</td></tr>
+</table>
+
+
+<hr><table border=0>
+<tr><td><h3>Class: Bone</td><td colspan=2></td></tr>
+<tr><td><b>Properties</b></td><td><b>Type</b></td><td><b>Description</b></td></tr>
+<tr><td>flags</td><td>int</td><td></td></tr>
+<tr><td>name</td><td>String</td><td></td></tr>
+<tr><td>parentName</td><td>String</td><td></td></tr>
+<tr><td>position</td><td>Vec3</td><td></td></tr>
+<tr><td>rotation</td><td>Vec3</td><td></td></tr>
+<tr><td>positionKeys</td><td>Collection of PositionKey</td><td></td></tr>
+<tr><td>rotationKeys</td><td>Collection of RotationKey</td><td></td></tr>
+
+<tr><td>&nbsp;</td></tr><tr><td><b>Functions</b></td><td colspan=2><b>Description</b></td></tr>
+<tr><td>Bone()</td><td colspan=2>Constructor.</td></tr>
+</table>
+
+
+<hr><table border=0>
+<tr><td><h3>Class: Collection</td><td colspan=2>Collection class for storing a number of objects. Each instance is associated with a certain object type.</td></tr>
+<tr><td><b>Properties</b></td><td><b>Type</b></td><td><b>Description</b></td></tr>
+<tr><td>operator []</td><td>Object</td><td>Sets/gets an item in the collection</td></tr>
+<tr><td>length</td><td>int</td><td>Number of items</td></tr>
+
+<tr><td>&nbsp;</td></tr><tr><td><b>Functions</b></td><td colspan=2><b>Description</b></td></tr>
+<tr><td>push(object, ...)</td><td colspan=2>Adds one or more items in the back of the collection. Returns a reference to the last item added.</td></tr>
+<tr><td>insert(object, index)</td><td colspan=2>Adds an item at the specified index.</td></tr>
+<tr><td>erase(first, count)</td><td colspan=2>Removes one or more items.</td></tr>
+<tr><td>clear()</td><td colspan=2>Empties the collection</td></tr>
+</table>
+
+
+
+<hr><table border=0>
+<tr><td><h3>Class: File</td><td colspan=2>Class for reading/writing files on disk.</td></tr>
+<tr><td><b>Static open flags</b></td><td><b>Type</b></td><td><b>Description</b></td></tr>
+<tr><td>APP<td>int</td><td>Flag: Opens an output file for appending.</td></tr>
+<tr><td>ATE<td>int</td><td>Flag: Opens an existing file and seeks the end.</td></tr>
+<tr><td>IN<td>int</td><td>Flag: Opens an input file.</td></tr>
+<tr><td>OUT<td>int</td><td>Flag: Opens an output file.</td></tr>
+<tr><td>TRUNC<td>int</td><td>Flag: Opens a file and deletes the old file, if it already exists.</td></tr>
+<tr><td>BINARY<td>int</td><td>Flag: Opens a file in binary mode. Text mode is default.</td></tr>
+<tr><td>curDir<td>String</td><td>Get/set the current directory</td></tr>
+
+<tr><td>&nbsp;</td></tr><tr><td><b>Properties</b></td><td><b>Type</b></td><td><b>Description</b></td></tr>
+<tr><td>path</td><td>String</td><td>Full path of the open file</td></tr>
+<tr><td>name</td><td>String</td><td>Name of the open file</td></tr>
+<tr><td>canRead</td><td>Boolean</td><td>Returns true if file is open for reading</td></tr>
+<tr><td>canWrite</td><td>Boolean</td><td>Returns true if file is open for writing</td></tr>
+<tr><td>isOpen</td><td>Booleang</td><td>Returns true if file is open</td></tr>
+<tr><td>mode</td><td>int</td><td>Original open flags</td></tr>
+<tr><td>size</td><td>int</td><td>Length of the file (not implemented)</td></tr>
+<tr><td>position</td><td>int</td><td>Read/write position (not implemented)</td></tr>
+<tr><td>eof</td><td>Boolean</td><td>Checks for End of file</td></tr>
+
+<tr><td>&nbsp;</td></tr><tr><td><b>Functions</b></td><td colspan=2><b>Description</b></td></tr>
+<tr><td>File(fileName, flags)</td><td colspan=2>Constructor. Optionally opens a file.</td></tr>
+<tr><td>open(fileName, flags)</td><td colspan=2>Open a file.</td></tr>
+<tr><td>close()</td><td colspan=2>Close the file.</td></tr>
+<tr><td>read(bytes)</td><td colspan=2>Read a bytes long string from the file</td></tr>
+<tr><td>readln()</td><td colspan=2>Read a line from the file</td></tr>
+<tr><td>write(arg, ...)</td><td colspan=2>Write a number of arguments to the file</td></tr>
+
+<tr><td>&nbsp;</td></tr><tr><td><b>Static functions</b></td><td colspan=2><b>Description</b></td></tr>
+<tr><td>exists(fileName)</td><td colspan=2>Returns true if specified file exists.</td></tr>
+<tr><td>copy(srcName, destPath)</td><td colspan=2>Copy an external file</td></tr>
+<tr><td>del(fileName)</td><td colspan=2>Delete an external file</td></tr>
+<tr><td>move(srcName, destName)</td><td colspan=2>Move/rename an external file.</td></tr>
+<tr><td>mkDir(path)</td><td colspan=2>Create a directory.</td></tr>
+<tr><td>created(fileName)</td><td colspan=2>Returns creation date for a file (not implemented)</td></tr>
+<tr><td>modified(fileName)</td><td colspan=2>Returns modified date for a file (not implemented)</td></tr>
+<tr><td>attrib(fileName)</td><td colspan=2>Returns file attributes (not implemented)</td></tr>
+<tr><td>fileSize(fileName)</td><td colspan=2>Returns file size (not implemented)</td></tr>
+
+</table>
+
+
+<hr><table border=0>
+<tr><td><h3>Class: Material</td><td colspan=2></td></tr>
+<tr><td><b>Properties</b></td><td><b>Type</b></td><td><b>Description</b></td></tr>
+<tr><td>flags</td><td>int</td><td></td></tr>
+<tr><td>name</td><td>String</td><td></td></tr>
+<tr><td>ambient</td><td>Vec4</td><td></td></tr>
+<tr><td>diffuse</td><td>Vec4</td><td></td></tr>
+<tr><td>specular</td><td>Vec4</td><td></td></tr>
+<tr><td>emissive</td><td>Vec4</td><td></td></tr>
+<tr><td>shininess</td><td>double</td><td></td></tr>
+<tr><td>transparency</td><td>double</td><td></td></tr>
+<tr><td>diffuseTexture</td><td>String</td><td></td></tr>
+<tr><td>alphaTexture</td><td>String</td><td></td></tr>
+<tr><td>nName</td><td>int</td><td></td></tr>
+
+<tr><td>&nbsp;</td></tr><tr><td><b>Functions</b></td><td colspan=2><b>Description</b></td></tr>
+<tr><td>Material(name)</td><td colspan=2>Constructor. Parameters are optioinal.</td></tr>
+</table>
+
+
+<hr><table border=0>
+<tr><td><h3>Class: Mesh</td><td colspan=2></td></tr>
+<tr><td><b>Properties</b></td><td><b>Type</b></td><td><b>Description</b></td></tr>
+<tr><td>flags</td><td>int</td><td></td></tr>
+<tr><td>name</td><td>String</td><td></td></tr>
+<tr><td>materialIndex</td><td>int</td><td></td></tr>
+<tr><td>vertices</td><td>Collection of Vertex</td><td></td></tr>
+<tr><td>normals</td><td>Collection of Vec3</td><td></td></tr>
+<tr><td>triangles</td><td>Collection of Triangle</td><td></td></tr>
+
+<tr><td>&nbsp;</td></tr><tr><td><b>Functions</b></td><td colspan=2><b>Description</b></td></tr>
+<tr><td>Mesh(name, materialIndex, flags)</td><td colspan=2>Constructor. Parameters are optioinal.</td></tr>
+</table>
+
+
+<hr><table border=0>
+<tr><td><h3>Class: Model</td><td colspan=2></td></tr>
+<tr><td><b>Properties</b></td><td><b>Type</b></td><td><b>Description</b></td></tr>
+<tr><td>meshes</td><td>Collection of Mesh</td><td></td></tr>
+<tr><td>materials</td><td>Collection of Material</td><td></td></tr>
+<tr><td>bones</td><td>Collection of Bone</td><td></td></tr>
+<tr><td>frame</td><td>int</td><td></td></tr>
+<tr><td>totalFrames</td><td>int</td><td></td></tr>
+<tr><td>position</td><td>Vec3</td><td></td></tr>
+<tr><td>rotation</td><td>Vec3</td><td></td></tr>
+</table>
+
+
+<hr><table border=0>
+<tr><td><h3>Class: PositionKey</td><td colspan=2></td></tr>
+<tr><td><b>Properties</b></td><td><b>Type</b></td><td><b>Description</b></td></tr>
+<tr><td>time</td><td>double</td><td></td></tr>
+<tr><td>position</td><td>Vec3</td><td></td></tr>
+
+<tr><td>&nbsp;</td></tr><tr><td><b>Functions</b></td><td colspan=2><b>Description</b></td></tr>
+<tr><td>PositionKey(time, position)</td><td colspan=2>Constructor. Parameters are optional</td></tr>
+</table>
+
+
+<hr><table border=0>
+<tr><td><h3>Class: RotationKey</td><td colspan=2></td></tr>
+<tr><td><b>Properties</b></td><td><b>Type</b></td><td><b>Description</b></td></tr>
+<tr><td>time</td><td>double</td><td></td></tr>
+<tr><td>rotation</td><td>Vec3</td><td></td></tr>
+
+<tr><td>&nbsp;</td></tr><tr><td><b>Functions</b></td><td colspan=2><b>Description</b></td></tr>
+<tr><td>RotationKey(time, rotation)</td><td colspan=2>Constructor. Parameters are optional</td></tr>
+</table>
+
+
+<hr><table border=0>
+<tr><td><h3>Class: Triangle</td><td colspan=2></td></tr>
+<tr><td><b>Properties</b></td><td><b>Type</b></td><td><b>Description</b></td></tr>
+<tr><td>flags</td><td>int</td><td></td></tr>
+<tr><td>vertexIndices</td><td>int[3]</td><td></td></tr>
+<tr><td>normalIndices</td><td>int[3]</td><td></td></tr>
+<tr><td>normal</td><td>Vec3</td><td></td></tr>
+<tr><td>smoothingGroup</td><td>int</td><td></td></tr>
+
+<tr><td>&nbsp;</td></tr><tr><td><b>Functions</b></td><td colspan=2><b>Description</b></td></tr>
+<tr><td>Triangle(vertexIndices, normalIndices, flags)</td><td colspan=2>Constructor. Parameters are optional</td></tr>
+</table>
+
+
+<hr><table border=0>
+<tr><td><h3>Class: Vec2</td><td colspan=2></td></tr>
+<tr><td><b>Properties</b></td><td><b>Type</b></td><td><b>Description</b></td></tr>
+<tr><td>x</td><td>double</td><td></td></tr>
+<tr><td>y</td><td>double</td><td></td></tr>
+
+<tr><td>&nbsp;</td></tr><tr><td><b>Functions</b></td><td colspan=2><b>Description</b></td></tr>
+<tr><td>Vec2(x, y)</td><td colspan=2>Constructor. Parameters are optional.</td></tr>
+</table>
+
+
+<hr><table border=0>
+<tr><td><h3>Class: Vec3</td><td colspan=2></td></tr>
+<tr><td><b>Properties</b></td><td><b>Type</b></td><td><b>Description</b></td></tr>
+<tr><td>x</td><td>double</td><td></td></tr>
+<tr><td>y</td><td>double</td><td></td></tr>
+<tr><td>z</td><td>double</td><td></td></tr>
+
+<tr><td>&nbsp;</td></tr><tr><td><b>Functions</b></td><td colspan=2><b>Description</b></td></tr>
+<tr><td>Vec3(x, y, z)</td><td colspan=2>Constructor. Parameters are optional.</td></tr>
+<tr><td>length()</td><td colspan=2>Returns the length of a vector. </td></tr>
+<tr><td>length2()</td><td colspan=2>Returns the squared length of a vector.</td></tr>
+<tr><td>normalize(newLength)</td><td colspan=2>Normalize a vector. Default newLength=1.</td></tr>
+
+<tr><td>&nbsp;</td></tr><tr><td><b>Static functions</b></td><td colspan=2><b>Description</b></td></tr>
+<tr><td>crossProd(v1, v2)</td><td colspan=2>Returns the cross product of two Vec3's.</td></tr>
+
+</table>
+
+
+<hr><table border=0>
+<tr><td><h3>Class: Vec4</td><td colspan=2></td></tr>
+<tr><td><b>Properties</b></td><td><b>Type</b></td><td><b>Description</b></td></tr>
+<tr><td>x</td><td>double</td><td></td></tr>
+<tr><td>y</td><td>double</td><td></td></tr>
+<tr><td>z</td><td>double</td><td></td></tr>
+<tr><td>w</td><td>double</td><td></td></tr>
+
+<tr><td>&nbsp;</td></tr><tr><td><b>Functions</b></td><td colspan=2><b>Description</b></td></tr>
+<tr><td>Vec4(x, y, z, w)</td><td colspan=2>Constructor. Parameters are optional.</td></tr>
+</table>
+
+
+<hr><table border=0>
+<tr><td><h3>Class: Vertex</td><td colspan=2></td></tr>
+<tr><td><b>Properties</b></td><td><b>Type</b></td><td><b>Description</b></td></tr>
+<tr><td>flags</td><td>int</td><td></td></tr>
+<tr><td>vertex</td><td>Vec3</td><td></td></tr>
+<tr><td>u</td><td>double</td><td></td></tr>
+<tr><td>v</td><td>double</td><td></td></tr>
+<tr><td>boneIndex</td><td>int</td><td></td></tr>
+
+<tr><td>&nbsp;</td></tr><tr><td><b>Functions</b></td><td colspan=2><b>Description</b></td></tr>
+<tr><td>Vertex(x, y, z, u, v, boneIndex, flags)</td><td colspan=2>Constructor. Parameters are optional</td></tr>
+</table>

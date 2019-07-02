@@ -1,0 +1,49 @@
+This is very early stages thus far...
+
+Take a look at test.ms3d (included) for a better idea.
+
+You can only use TGA and JPG files.
+The second material is not alpha but bump.
+
+Add these joints to your desire, use the same name as a Material to control the lights (aka the numbers are joints and the letters are materials with same name):
+1) Camera(<x>,<y>) - position of the camera, x and y are the resolution of the render
+2) EndCamera - what the camera is looking at
+3) SunLight<name> - position of the sunlight
+  a) Ambient controls color
+  b) Shininess + Transparency controls power
+4) SoftLight<name> - position of the softlight
+  a) Ambient controls color
+  b) 2 * Shininess + Transparency controls power
+5) SpotLight<name> - position of the spotlight
+  a) Ambient controls color
+  b) Diffuse controls fog color
+  c) 15 * Shininess + 4 * Transparency controls power
+6) EndSpotLight<name> - what SpotLight<name> is looking at
+
+Add these two Materials if you wish:
+1) HemiLight - pointless light
+  a) Ambient controls color
+  b) 2 + Shininess controls samples
+  c) 10 * Transparency controls power
+2) background - the overall background
+  a) Ambient controls the color
+  b) Add a picture for a background picture (read the YafRay doc)
+
+Rendering defaults to 300 by 300.
+
+You can add more than one type of light just make sure to give some them some name. Ex:
+SunLight_Overhead
+
+Eventually a GUI will be around to change all the necessary values. It does get all the material info from MS3D. If you want to change the values then open up the xml file, edit, save, then drag-and-drop onto yafray.exe to render again. Goto
+http://www.coala.uniovi.es/~jandro/noname/
+for details.
+
+TODO:
+- Finish up the current pages.
+- Add an objects page
+- Allow for saving options
+
+History:
+3/24/04 - Added a sample of the incomplete GUI.
+
+-- mijacs

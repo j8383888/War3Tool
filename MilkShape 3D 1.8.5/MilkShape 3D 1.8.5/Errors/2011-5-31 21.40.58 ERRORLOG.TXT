@@ -1,0 +1,1418 @@
+ms3d caused an Access Violation (0xc0000005) 
+in module ntdll.dll at 001b:77a769e0.
+
+Exception handler called in HackDLL Module.
+Error occurred at 2011-5-31 21.40.58.
+C:\Program Files\MilkShape 3D 1.8.5\MilkShape 3D 1.8.5\ms3d.exe,run by Administrator.
+Operating system:  unknown Windows version (6.1.7600).
+4 processor(s), type 586.
+42% memory in use.
+2039 MBytes physical memory.
+1172 MBytes physical memory free.
+4078 MBytes paging file.
+2448 MBytes paging file free.
+2048 MBytes user address space.
+1777 MBytes user address space free.
+Write to location 6639664b caused an access violation.
+
+Context:
+EDI:    0x66396647  ESI: 0x6639664b  EAX:   0x6639664b
+EBX:    0x00000000  ECX: 0x66396627  EDX:   0x0012ca08
+EIP:    0x77a769e0  EBP: 0x0012c98c  SegCs: 0x0000001b
+EFlags: 0x00010202  ESP: 0x0012c978  SegSs: 0x00000023
+
+Bytes at CS:EIP:
+f0 0f ba 30 00 0f 83 60 f5 00 00 64 a1 18 00 00 Module 1
+C:\Program Files\MilkShape 3D 1.8.5\MilkShape 3D 1.8.5\ilu.dll
+Image Base: 0x10000000  Image Size: 0x00014000
+Checksum:   0x00000000  Time Stamp: 0x40b6218a
+File Size:  81920       File Time:  2004-5-27 23.12.42
+Version Information:
+   Company:    Abysmal Software
+   Product:    Developer's Image Utilities Library
+   FileDesc:   ILU: A portable image library in development
+   FileVer:    0.1.6.5
+   ProdVer:    0.1.6.5
+
+Module 2
+C:\Program Files\MilkShape 3D 1.8.5\MilkShape 3D 1.8.5\msmodellib.dll
+Image Base: 0x10000000  Image Size: 0x00018000
+Checksum:   0x0001460e  Time Stamp: 0x4a5456eb
+File Size:  78848       File Time:  2009-7-8 16.21.00
+Version Information:
+   Company:    
+   Product:    
+   FileDesc:   
+   FileVer:    0.0.0.0
+   ProdVer:    0.0.0.0
+
+Module 3
+C:\Program Files\MilkShape 3D 1.8.5\MilkShape 3D 1.8.5\dtx.dll
+Image Base: 0x10000000  Image Size: 0x00008000
+Checksum:   0x00000000  Time Stamp: 0x3f8892c3
+File Size:  28672       File Time:  2003-10-11 22.31.16
+Version Information:
+   Company:    BlackAngel Software
+   Product:    DTX Dynamic Link Library
+   FileDesc:   DTX DLL
+   FileVer:    3.0.0.0
+   ProdVer:    3.0.0.0
+
+Module 4
+C:\Program Files\MilkShape 3D 1.8.5\MilkShape 3D 1.8.5\ms3d.exe
+Image Base: 0x00400000  Image Size: 0x03201000
+Checksum:   0x00000000  Time Stamp: 0x4a545810
+File Size:  2421760     File Time:  2009-7-8 16.25.52
+Version Information:
+   Company:    chUmbaLum sOft
+   Product:    MilkShape 3D
+   FileDesc:   MilkShape 3D
+   FileVer:    1.8.5.0
+   ProdVer:    1.8.5.0
+
+Module 5
+C:\Program Files\KSafe\ksfmon.dll
+Image Base: 0x10000000  Image Size: 0x0012c000
+Checksum:   0x00125894  Time Stamp: 0x4d8074df
+File Size:  1193376     File Time:  2011-3-18 15.20.54
+Version Information:
+   Company:    Kingsoft Corporation
+   Product:    金山卫士
+   FileDesc:   KSafe Monitor
+   FileVer:    2.5.1.1318
+   ProdVer:    2.5.1.1318
+
+Module 6
+C:\Program Files\Common Files\Kingsoft\kiscommon\kwsui.dll
+Image Base: 0x10000000  Image Size: 0x0008c000
+Checksum:   0x0008f848  Time Stamp: 0x4dc36138
+File Size:  567912      File Time:  2011-5-27 22.53.40
+Version Information:
+   Company:    Kingsoft Corporation
+   Product:    Kingsoft Internet Security
+   FileDesc:   Kingsoft Webshield Module
+   FileVer:    2011.5.6.49
+   ProdVer:    9.0.33479.49
+
+Module 7
+C:\Program Files\Common Files\Kingsoft\kiscommon\kswebshield.dll
+Image Base: 0x10000000  Image Size: 0x000b6000
+Checksum:   0x000bc432  Time Stamp: 0x4dc360e5
+File Size:  731752      File Time:  2011-5-27 22.53.40
+Version Information:
+   Company:    Kingsoft Corporation
+   Product:    Kingsoft Internet Security
+   FileDesc:   Kingsoft Webshield Module
+   FileVer:    2011.5.6.49
+   ProdVer:    9.0.33479.49
+
+Module 8
+C:\Program Files\MilkShape 3D 1.8.5\MilkShape 3D 1.8.5\msSelectionEditor.dll
+Image Base: 0x10000000  Image Size: 0x000a5000
+Checksum:   0x00000000  Time Stamp: 0x3f23691b
+File Size:  301568      File Time:  2003-7-27 07.54.36
+Version Information:
+   Company:    Brain Drain Productions
+   Product:    msSelectionEditor
+   FileDesc:   msSelectionEditor
+   FileVer:    0.93.0.0
+   ProdVer:    0.93.0.0
+
+Module 9
+C:\Windows\system32\nvoglv32.DLL
+Image Base: 0x69500000  Image Size: 0x00e7a000
+Checksum:   0x00e5c688  Time Stamp: 0x4d27c3d6
+File Size:  15047272    File Time:  2011-1-8 19.27.00
+Version Information:
+   Company:    NVIDIA Corporation
+   Product:    NVIDIA Compatible OpenGL ICD
+   FileDesc:   NVIDIA Compatible OpenGL ICD
+   FileVer:    8.17.12.6658
+   ProdVer:    8.17.12.6658
+
+Module 10
+C:\Users\Administrator\Desktop\GA1305Share\GA1305Share\hackdll.dll
+Image Base: 0x10000000  Image Size: 0x000e8000
+Checksum:   0x000e0ec0  Time Stamp: 0x4c1c9031
+File Size:  892416      File Time:  2010-6-19 17.39.00
+Version Information:
+   Company:    sky
+   Product:     hackdll 动态链接库
+   FileDesc:   hackdll 动态链接库
+   FileVer:    1.0.3.5
+   ProdVer:    1.0.3.5
+
+Module 11
+C:\Windows\Ku6Kss.dll
+Image Base: 0x10000000  Image Size: 0x00052000
+Checksum:   0x00055ace  Time Stamp: 0x4c0efb42
+File Size:  325232      File Time:  2010-6-21 14.34.06
+Version Information:
+   Company:    酷6网（北京）信息技术有限公司
+   Product:    极速酷6网页加速模块
+   FileDesc:   极速酷6网页加速模块
+   FileVer:    2.0.0.1
+   ProdVer:    2.0.0.1
+
+Module 12
+C:\Program Files\MilkShape 3D 1.8.5\MilkShape 3D 1.8.5\devil.dll
+Image Base: 0x10000000  Image Size: 0x00188000
+Checksum:   0x00000000  Time Stamp: 0x40b62185
+File Size:  864256      File Time:  2004-5-27 23.12.38
+Version Information:
+   Company:    Abysmal Software
+   Product:    Developer's Image Library (DevIL)
+   FileDesc:   DevIL: A portable image library in development
+   FileVer:    0.1.6.7
+   ProdVer:    0.1.6.7
+
+Module 13
+C:\Windows\system32\wpdshext.dll
+Image Base: 0x67250000  Image Size: 0x00238000
+Checksum:   0x0023786c  Time Stamp: 0x4a5bdb45
+File Size:  2311168     File Time:  2009-7-14 09.16.22
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   便携设备 Shell 扩展
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 14
+C:\Windows\system32\DDRAW.dll
+Image Base: 0x67d80000  Image Size: 0x000e7000
+Checksum:   0x000834da  Time Stamp: 0x4a5bd9b8
+File Size:  531968      File Time:  2009-7-14 09.15.12
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Microsoft DirectDraw
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 15
+C:\Windows\system32\SearchFolder.dll
+Image Base: 0x68900000  Image Size: 0x0009f000
+Checksum:   0x000acddb  Time Stamp: 0x4a5bdb03
+File Size:  643072      File Time:  2009-7-14 09.16.14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   SearchFolder
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 16
+C:\Windows\system32\EhStorAPI.dll
+Image Base: 0x69060000  Image Size: 0x00022000
+Checksum:   0x00022295  Time Stamp: 0x4a5bd9de
+File Size:  128512      File Time:  2009-7-14 09.15.16
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows 增强的存储 API
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 17
+C:\Windows\system32\dbghelp.dll
+Image Base: 0x69430000  Image Size: 0x000eb000
+Checksum:   0x000dc324  Time Stamp: 0x4a5bd9b2
+File Size:  854528      File Time:  2009-7-14 09.15.10
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows Image Helper
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 18
+C:\Windows\system32\odbcint.dll
+Image Base: 0x69d30000  Image Size: 0x00038000
+Checksum:   0x000404f2  Time Stamp: 0x4a5bdac0
+File Size:  229376      File Time:  2009-7-14 09.09.16
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   ODBC Resources
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 19
+C:\Windows\system32\WMVCore.DLL
+Image Base: 0x6a1a0000  Image Size: 0x00267000
+Checksum:   0x0026730b  Time Stamp: 0x4a5bdaca
+File Size:  2504192     File Time:  2009-7-14 09.16.14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows Media Playback/Authoring DLL
+   FileVer:    12.0.7600.16385
+   ProdVer:    12.0.7600.16385
+
+Module 20
+C:\Windows\System32\ntlanman.dll
+Image Base: 0x6a440000  Image Size: 0x00014000
+Checksum:   0x00013266  Time Stamp: 0x4a5bdae8
+File Size:  69120       File Time:  2009-7-14 09.16.12
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Microsoft? LAN 管理器
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 21
+C:\Windows\system32\ODBC32.dll
+Image Base: 0x6a460000  Image Size: 0x0008c000
+Checksum:   0x00099c10  Time Stamp: 0x4cb92961
+File Size:  573440      File Time:  2010-10-16 12.34.38
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   ODBC Driver Manager
+   FileVer:    6.1.7600.16688
+   ProdVer:    6.1.7600.16688
+
+Module 22
+C:\Windows\system32\MFC42.DLL
+Image Base: 0x6a4f0000  Image Size: 0x0011c000
+Checksum:   0x0012066e  Time Stamp: 0x4d79b3c0
+File Size:  1137664     File Time:  2011-3-11 13.40.26
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft (R) Visual C++
+   FileDesc:   MFCDLL 共享库 - 零售版
+   FileVer:    6.6.8064.0
+   ProdVer:    6.6.4.0
+
+Module 23
+C:\Windows\System32\StructuredQuery.dll
+Image Base: 0x6c0d0000  Image Size: 0x0005c000
+Checksum:   0x0005efbd  Time Stamp: 0x4be11391
+File Size:  363520      File Time:  2010-5-5 14.46.56
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Windows? Search
+   FileDesc:   Structured Query
+   FileVer:    7.0.7600.16587
+   ProdVer:    7.0.7600.16587
+
+Module 24
+C:\Program Files\Internet Explorer\ieproxy.dll
+Image Base: 0x6ccd0000  Image Size: 0x0002b000
+Checksum:   0x000366de  Time Stamp: 0x4d65ea97
+File Size:  163328      File Time:  2011-2-24 13.29.56
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Windows? Internet Explorer
+   FileDesc:   IE ActiveX Interface Marshaling Library
+   FileVer:    8.0.7600.16766
+   ProdVer:    8.0.7600.16766
+
+Module 25
+C:\Windows\system32\audiodev.dll
+Image Base: 0x6d7e0000  Image Size: 0x0003f000
+Checksum:   0x00041ba1  Time Stamp: 0x4a5bd97b
+File Size:  243712      File Time:  2009-7-14 09.14.58
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   便携媒体设备命令行解释器扩展
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 26
+C:\Windows\System32\davclnt.dll
+Image Base: 0x6da80000  Image Size: 0x00017000
+Checksum:   0x00017cfb  Time Stamp: 0x4d1039c1
+File Size:  80384       File Time:  2010-12-21 13.34.14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Web DAV Client DLL
+   FileVer:    6.1.7600.16723
+   ProdVer:    6.1.7600.16723
+
+Module 27
+C:\Windows\system32\NetworkExplorer.dll
+Image Base: 0x6daa0000  Image Size: 0x00198000
+Checksum:   0x001a2619  Time Stamp: 0x4a5bda79
+File Size:  1661440     File Time:  2009-7-14 09.16.04
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   网络浏览器
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 28
+C:\Program Files\Common Files\microsoft shared\ink\tiptsf.dll
+Image Base: 0x6deb0000  Image Size: 0x00058000
+Checksum:   0x0005fb3c  Time Stamp: 0x4a5bdb20
+File Size:  348160      File Time:  2009-7-14 09.16.18
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Tablet PC 输入面板文本服务框架
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 29
+C:\Windows\system32\msls31.dll
+Image Base: 0x6df10000  Image Size: 0x0002a000
+Checksum:   0x000319dd  Time Stamp: 0x4a5bdaa6
+File Size:  157184      File Time:  2009-7-14 09.15.46
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Line Services
+   FileDesc:   Microsoft Line Services library file
+   FileVer:    3.10.349.0
+   ProdVer:    3.10.0.0
+
+Module 30
+C:\Windows\system32\ieframe.DLL
+Image Base: 0x6e000000  Image Size: 0x00a7f000
+Checksum:   0x00a8993f  Time Stamp: 0x4d65ea95
+File Size:  10989056    File Time:  2011-2-24 13.29.56
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Windows? Internet Explorer
+   FileDesc:   Internet 浏览器
+   FileVer:    8.0.7600.16766
+   ProdVer:    8.0.7600.16766
+
+Module 31
+C:\Windows\System32\drprov.dll
+Image Base: 0x6ec10000  Image Size: 0x00008000
+Checksum:   0x00009767  Time Stamp: 0x4a5bd9f3
+File Size:  18944       File Time:  2009-7-14 09.15.14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Microsoft 远程桌面会话主机服务器网络提供程序
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 32
+C:\Windows\system32\LINKINFO.dll
+Image Base: 0x6f340000  Image Size: 0x00009000
+Checksum:   0x0000df7c  Time Stamp: 0x4a5bda0c
+File Size:  22016       File Time:  2009-7-14 09.15.38
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows Volume Tracking
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 33
+C:\Windows\system32\SHDOCVW.dll
+Image Base: 0x6f350000  Image Size: 0x0002e000
+Checksum:   0x00031932  Time Stamp: 0x4a5bdb00
+File Size:  179712      File Time:  2009-7-14 09.16.16
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Shell Doc 对象和控件库
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 34
+C:\Windows\system32\actxprxy.dll
+Image Base: 0x6f380000  Image Size: 0x0004e000
+Checksum:   0x000538f1  Time Stamp: 0x4a5bd988
+File Size:  309248      File Time:  2009-7-14 09.14.54
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   ActiveX Interface Marshaling Library
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 35
+C:\Windows\System32\DAVHLPR.dll
+Image Base: 0x6f430000  Image Size: 0x00008000
+Checksum:   0x000089a9  Time Stamp: 0x4a5bbfc9
+File Size:  19456       File Time:  2009-7-14 09.15.10
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   DAV Helper DLL
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 36
+C:\Windows\system32\thumbcache.dll
+Image Base: 0x6f440000  Image Size: 0x00016000
+Checksum:   0x000183c7  Time Stamp: 0x4a5bdb1a
+File Size:  82944       File Time:  2009-7-14 09.16.18
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Microsoft 缩略图缓存
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 37
+C:\Windows\system32\PortableDeviceApi.dll
+Image Base: 0x6f6b0000  Image Size: 0x00089000
+Checksum:   0x0008774a  Time Stamp: 0x4a5bdb02
+File Size:  547328      File Time:  2009-7-14 09.16.14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows 便携设备 API 组件
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 38
+C:\Windows\system32\ntshrui.dll
+Image Base: 0x6f7e0000  Image Size: 0x0006f000
+Checksum:   0x0006fada  Time Stamp: 0x4a5bdaeb
+File Size:  442880      File Time:  2009-7-14 09.16.12
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   用于共享的外壳扩展
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 39
+C:\Windows\system32\CSCAPI.dll
+Image Base: 0x6f850000  Image Size: 0x0000b000
+Checksum:   0x00015338  Time Stamp: 0x4a5bbfd1
+File Size:  34816       File Time:  2009-7-14 09.15.08
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Offline Files Win32 API
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 40
+C:\Windows\System32\CSCDLL.dll
+Image Base: 0x6f860000  Image Size: 0x00009000
+Checksum:   0x000123dc  Time Stamp: 0x4a5bda42
+File Size:  23040       File Time:  2009-7-14 09.15.08
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Offline Files Temporary Shim
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 41
+C:\Windows\System32\cscui.dll
+Image Base: 0x6f870000  Image Size: 0x0006a000
+Checksum:   0x0006f638  Time Stamp: 0x4a5bda46
+File Size:  418816      File Time:  2009-7-14 09.15.08
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   客户端缓存 UI
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 42
+C:\Windows\system32\EhStorShell.dll
+Image Base: 0x6f8e0000  Image Size: 0x00031000
+Checksum:   0x0003392d  Time Stamp: 0x4a5bd9e3
+File Size:  189952      File Time:  2009-7-14 09.15.16
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows 增强的存储外壳扩展 DLL
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 43
+C:\Windows\system32\GLU32.dll
+Image Base: 0x70340000  Image Size: 0x00022000
+Checksum:   0x0002e776  Time Stamp: 0x4a5bd9df
+File Size:  130048      File Time:  2009-7-14 09.15.24
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   OpenGL 实用工具库 DLL
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 44
+C:\Windows\system32\opengl32.dll
+Image Base: 0x70420000  Image Size: 0x000c8000
+Checksum:   0x000d0f4a  Time Stamp: 0x4a5bdadb
+File Size:  791552      File Time:  2009-7-14 09.16.14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   OpenGL Client DLL
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 45
+C:\Windows\system32\MSVFW32.dll
+Image Base: 0x704f0000  Image Size: 0x00021000
+Checksum:   0x00022f78  Time Stamp: 0x4a5bda72
+File Size:  120320      File Time:  2009-7-14 09.15.52
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Microsoft Video for Windows DLL
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 46
+C:\Windows\system32\avifil32.dll
+Image Base: 0x70520000  Image Size: 0x00019000
+Checksum:   0x0001973b  Time Stamp: 0x4b2c942b
+File Size:  91648       File Time:  2009-12-19 17.02.02
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Microsoft AVI 文件支持库
+   FileVer:    6.1.7600.16490
+   ProdVer:    6.1.7600.16490
+
+Module 47
+C:\Windows\system32\wsock32.dll
+Image Base: 0x70c70000  Image Size: 0x00007000
+Checksum:   0x00005f90  Time Stamp: 0x4a5bdb63
+File Size:  15360       File Time:  2009-7-14 09.16.22
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows Socket 32-Bit DLL
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 48
+C:\Windows\system32\oledlg.dll
+Image Base: 0x710c0000  Image Size: 0x0001c000
+Checksum:   0x000223b4  Time Stamp: 0x4a5bdace
+File Size:  103424      File Time:  2009-7-14 09.16.14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   OLE 用户界面支持
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 49
+C:\Users\Administrator\AppData\Roaming\Kingsoft\klive\bin\kliveshellext.dll
+Image Base: 0x710e0000  Image Size: 0x0005b000
+Checksum:   0x0005b71b  Time Stamp: 0x4d5b9ee2
+File Size:  359776      File Time:  2011-2-16 17.59.16
+Version Information:
+   Company:    Kingsoft Corp. Ltd.
+   Product:    金山T盘
+   FileDesc:   KliveShellExt Module
+   FileVer:    1.21.0.672
+   ProdVer:    1.21.0.672
+
+Module 50
+C:\Windows\system32\explorerframe.dll
+Image Base: 0x713c0000  Image Size: 0x0016f000
+Checksum:   0x00177699  Time Stamp: 0x4c258add
+File Size:  1495040     File Time:  2010-6-26 13.14.30
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   ExplorerFrame
+   FileVer:    6.1.7600.16623
+   ProdVer:    6.1.7600.16623
+
+Module 51
+C:\Windows\system32\MPR.dll
+Image Base: 0x718f0000  Image Size: 0x00012000
+Checksum:   0x0001055d  Time Stamp: 0x4a5bda36
+File Size:  64000       File Time:  2009-7-14 09.15.42
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   多提供程序路由器 DLL
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 52
+C:\Windows\system32\WMASF.DLL
+Image Base: 0x71db0000  Image Size: 0x0003d000
+Checksum:   0x0003ea00  Time Stamp: 0x4a5bdb68
+File Size:  237568      File Time:  2009-7-14 09.16.20
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows Media ASF DLL
+   FileVer:    12.0.7600.16385
+   ProdVer:    12.0.7600.16385
+
+Module 53
+C:\Windows\system32\DCIMAN32.dll
+Image Base: 0x71df0000  Image Size: 0x00006000
+Checksum:   0x0000e330  Time Stamp: 0x4a5bd9b4
+File Size:  10240       File Time:  2009-7-14 09.15.10
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   DCI Manager
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 54
+C:\Windows\system32\OLEACC.dll
+Image Base: 0x72f10000  Image Size: 0x0003c000
+Checksum:   0x0004397a  Time Stamp: 0x4a5bdac8
+File Size:  233472      File Time:  2009-7-14 09.16.14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Active Accessibility Core Component
+   FileVer:    7.0.0.0
+   ProdVer:    6.1.7600.16385
+
+Module 55
+C:\Windows\system32\WINSPOOL.DRV
+Image Base: 0x733f0000  Image Size: 0x00051000
+Checksum:   0x00053d1a  Time Stamp: 0x4a5bdb4b
+File Size:  319488      File Time:  2009-7-14 09.14.10
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows 后台处理程序驱动程序
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 56
+C:\Windows\system32\slc.dll
+Image Base: 0x73cc0000  Image Size: 0x0000a000
+Checksum:   0x0000fd69  Time Stamp: 0x4a5bdb0d
+File Size:  27136       File Time:  2009-7-14 09.16.16
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   软件授权客户端 Dll
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 57
+C:\Windows\system32\ntmarta.dll
+Image Base: 0x73ec0000  Image Size: 0x00021000
+Checksum:   0x0002760c  Time Stamp: 0x4a5bdae9
+File Size:  121856      File Time:  2009-7-14 09.16.12
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows NT MARTA 提供程序
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 58
+C:\Windows\system32\wkscli.dll
+Image Base: 0x74030000  Image Size: 0x0000f000
+Checksum:   0x0000fb43  Time Stamp: 0x4a5bc541
+File Size:  47104       File Time:  2009-7-14 09.16.20
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Workstation Service Client DLL
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 59
+C:\Windows\system32\netutils.dll
+Image Base: 0x74040000  Image Size: 0x00009000
+Checksum:   0x00015232  Time Stamp: 0x4a5bc538
+File Size:  22016       File Time:  2009-7-14 09.16.04
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Net Win32 API Helpers DLL
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 60
+C:\Windows\system32\PortableDeviceTypes.dll
+Image Base: 0x740e0000  Image Size: 0x0002b000
+Checksum:   0x00029baa  Time Stamp: 0x4a5bdb07
+File Size:  159744      File Time:  2009-7-14 09.16.14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows Portable Device (Parameter) Types Component
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 61
+C:\Windows\system32\WindowsCodecs.dll
+Image Base: 0x74170000  Image Size: 0x000fb000
+Checksum:   0x00103f2a  Time Stamp: 0x4a5bdb3a
+File Size:  1011200     File Time:  2009-7-14 09.16.20
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Microsoft Windows Codecs Library
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 62
+C:\Windows\system32\xmllite.dll
+Image Base: 0x74270000  Image Size: 0x0002f000
+Checksum:   0x00032873  Time Stamp: 0x4a5bdb42
+File Size:  180224      File Time:  2009-7-14 09.16.22
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft XML Core Services
+   FileDesc:   Microsoft XmlLite Library
+   FileVer:    1.3.1000.0
+   ProdVer:    1.3.1000.0
+
+Module 63
+C:\Windows\system32\DUser.dll
+Image Base: 0x742f0000  Image Size: 0x0002f000
+Checksum:   0x0002fba2  Time Stamp: 0x4a5bda06
+File Size:  181248      File Time:  2009-7-14 09.15.14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows DirectUser Engine
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 64
+C:\Windows\system32\DUI70.dll
+Image Base: 0x74320000  Image Size: 0x000b2000
+Checksum:   0x000b54ef  Time Stamp: 0x4a5bda05
+File Size:  717824      File Time:  2009-7-14 09.15.14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows DirectUI 引擎
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 65
+C:\Windows\WinSxS\x86_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.7600.16385_none_72fc7cbf861225ca\gdiplus.dll
+Image Base: 0x743e0000  Image Size: 0x00190000
+Checksum:   0x0018fad3  Time Stamp: 0x4a5bd976
+File Size:  1624576     File Time:  2009-7-14 09.03.52
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Microsoft GDI+
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 66
+C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7600.16661_none_420fe3fa2b8113bd\COMCTL32.dll
+Image Base: 0x745d0000  Image Size: 0x0019e000
+Checksum:   0x001a0a38  Time Stamp: 0x4c6f625b
+File Size:  1680896     File Time:  2010-8-21 13.21.34
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   用户体验控件库
+   FileVer:    6.10.7600.16661
+   ProdVer:    6.1.7600.16661
+
+Module 67
+C:\Windows\system32\propsys.dll
+Image Base: 0x74770000  Image Size: 0x000f5000
+Checksum:   0x000ff92d  Time Stamp: 0x4a5bdacb
+File Size:  988160      File Time:  2009-7-14 09.16.14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Windows? Search
+   FileDesc:   Microsoft 属性系统
+   FileVer:    7.0.7600.16385
+   ProdVer:    7.0.7600.16385
+
+Module 68
+C:\Windows\system32\rsaenh.dll
+Image Base: 0x750b0000  Image Size: 0x0003b000
+Checksum:   0x000401a8  Time Stamp: 0x4a5bdae0
+File Size:  242936      File Time:  2009-7-14 09.17.56
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Microsoft Enhanced Cryptographic Provider
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 69
+C:\Windows\System32\WINSTA.dll
+Image Base: 0x75270000  Image Size: 0x00029000
+Checksum:   0x000264ac  Time Stamp: 0x4a5bdb4e
+File Size:  156160      File Time:  2009-7-14 09.16.20
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Winstation Library
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 70
+C:\Windows\system32\CRYPTSP.dll
+Image Base: 0x75340000  Image Size: 0x00016000
+Checksum:   0x00017990  Time Stamp: 0x4a5bda3d
+File Size:  78848       File Time:  2009-7-14 09.15.08
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Cryptographic Service Provider API
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 71
+C:\Windows\system32\srvcli.dll
+Image Base: 0x75530000  Image Size: 0x00019000
+Checksum:   0x00021cbf  Time Stamp: 0x4a5bdb37
+File Size:  90112       File Time:  2009-7-14 09.16.16
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Server Service Client DLL
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 72
+C:\Windows\System32\Secur32.dll
+Image Base: 0x755a0000  Image Size: 0x00008000
+Checksum:   0x00015477  Time Stamp: 0x4a5bdb0c
+File Size:  22016       File Time:  2009-7-14 09.16.14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Security Support Provider Interface
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 73
+C:\Windows\system32\SSPICLI.DLL
+Image Base: 0x757a0000  Image Size: 0x0001a000
+Checksum:   0x0001caac  Time Stamp: 0x4a5bdb3c
+File Size:  99840       File Time:  2009-7-14 09.16.16
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Security Support Provider Interface
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 74
+C:\Windows\system32\apphelp.dll
+Image Base: 0x757c0000  Image Size: 0x0004b000
+Checksum:   0x0005210a  Time Stamp: 0x4b1e3784
+File Size:  292864      File Time:  2009-12-8 19.32.04
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   应用程序兼容性客户端库
+   FileVer:    6.1.7600.16481
+   ProdVer:    6.1.7600.16481
+
+Module 75
+C:\Windows\system32\CRYPTBASE.dll
+Image Base: 0x75810000  Image Size: 0x0000c000
+Checksum:   0x00014593  Time Stamp: 0x4a5bbf41
+File Size:  36864       File Time:  2009-7-14 09.15.08
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Base cryptographic API DLL
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 76
+C:\Windows\system32\RpcRtRemote.dll
+Image Base: 0x75880000  Image Size: 0x0000e000
+Checksum:   0x00010593  Time Stamp: 0x4a5bc6b3
+File Size:  45568       File Time:  2009-7-14 09.16.14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Remote RPC Extension
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 77
+C:\Windows\system32\profapi.dll
+Image Base: 0x75890000  Image Size: 0x0000b000
+Checksum:   0x000126fb  Time Stamp: 0x4a5bbf41
+File Size:  31744       File Time:  2009-7-14 09.16.14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   User Profile Basic API
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 78
+C:\Windows\system32\MSASN1.dll
+Image Base: 0x75900000  Image Size: 0x0000c000
+Checksum:   0x00017dbc  Time Stamp: 0x4a98d038
+File Size:  34816       File Time:  2009-12-15 15.11.40
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   ASN.1 Runtime APIs
+   FileVer:    6.1.7600.16415
+   ProdVer:    6.1.7600.16415
+
+Module 79
+C:\Windows\system32\version.dll
+Image Base: 0x75910000  Image Size: 0x00009000
+Checksum:   0x000138c1  Time Stamp: 0x4a5bdb2b
+File Size:  21504       File Time:  2009-7-14 09.16.18
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Version Checking and File Installation Libraries
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 80
+C:\Windows\system32\d3d8thk.dll
+Image Base: 0x759d0000  Image Size: 0x00006000
+Checksum:   0x00009663  Time Stamp: 0x4a5bd9a8
+File Size:  11264       File Time:  2009-7-14 09.15.10
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Microsoft Direct3D OS Thunk Layer
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 81
+C:\Windows\system32\WINTRUST.dll
+Image Base: 0x759e0000  Image Size: 0x0002d000
+Checksum:   0x000376ed  Time Stamp: 0x4b39a768
+File Size:  172032      File Time:  2009-12-29 14.55.36
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Microsoft Trust Verification APIs
+   FileVer:    6.1.7600.16493
+   ProdVer:    6.1.7600.16493
+
+Module 82
+C:\Windows\system32\WINMM.dll
+Image Base: 0x75a10000  Image Size: 0x00032000
+Checksum:   0x00033ce9  Time Stamp: 0x4a5bdb42
+File Size:  194048      File Time:  2009-7-14 09.16.20
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   MCI API DLL
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 83
+C:\Windows\system32\KERNELBASE.dll
+Image Base: 0x75a50000  Image Size: 0x0004a000
+Checksum:   0x00047684  Time Stamp: 0x4a5bdaae
+File Size:  288256      File Time:  2009-7-14 09.15.36
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows NT 基本 API 客户端 DLL
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 84
+C:\Windows\system32\DEVOBJ.dll
+Image Base: 0x75aa0000  Image Size: 0x00012000
+Checksum:   0x0001ed87  Time Stamp: 0x4a5bd9c5
+File Size:  64512       File Time:  2009-7-14 09.15.12
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Device Information Set DLL
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 85
+C:\Windows\system32\CFGMGR32.dll
+Image Base: 0x75ac0000  Image Size: 0x00027000
+Checksum:   0x0002426d  Time Stamp: 0x4a5bd9a6
+File Size:  145920      File Time:  2009-7-14 09.15.04
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Configuration Manager DLL
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 86
+C:\Windows\system32\dwmapi.dll
+Image Base: 0x75af0000  Image Size: 0x00013000
+Checksum:   0x0001eb6f  Time Stamp: 0x4a5bda07
+File Size:  67072       File Time:  2009-7-14 09.15.14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Microsoft 桌面窗口管理器 API
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 87
+C:\Windows\system32\CRYPT32.dll
+Image Base: 0x75b10000  Image Size: 0x0011c000
+Checksum:   0x0011a903  Time Stamp: 0x4a5bda39
+File Size:  1151488     File Time:  2009-7-14 09.15.08
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   加密 API32
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 88
+C:\Windows\system32\WLDAP32.dll
+Image Base: 0x75c30000  Image Size: 0x00045000
+Checksum:   0x0004b5b1  Time Stamp: 0x4a5bdb62
+File Size:  268800      File Time:  2009-7-14 09.16.20
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Win32 LDAP API DLL
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 89
+C:\Windows\system32\LPK.dll
+Image Base: 0x75c80000  Image Size: 0x0000a000
+Checksum:   0x000093af  Time Stamp: 0x4a5bda19
+File Size:  26624       File Time:  2009-7-14 09.15.38
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Language Pack
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 90
+C:\Windows\system32\USER32.dll
+Image Base: 0x75c90000  Image Size: 0x000c9000
+Checksum:   0x000cafcb  Time Stamp: 0x4a5bdb2f
+File Size:  811520      File Time:  2009-7-14 09.16.18
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   多用户 Windows 用户 API 客户端 DLL
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 91
+C:\Windows\system32\ole32.dll
+Image Base: 0x75d60000  Image Size: 0x0015c000
+Checksum:   0x00166f16  Time Stamp: 0x4c297c56
+File Size:  1413632     File Time:  2010-6-29 13.02.04
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   用于 Windows 的 Microsoft OLE
+   FileVer:    6.1.7600.16624
+   ProdVer:    6.1.7600.16624
+
+Module 92
+C:\Windows\system32\WS2_32.dll
+Image Base: 0x75ec0000  Image Size: 0x00035000
+Checksum:   0x0003ba01  Time Stamp: 0x4a5bdb4a
+File Size:  206336      File Time:  2009-7-14 09.16.22
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows Socket 2.0 32 位 DLL
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 93
+C:\Windows\system32\comdlg32.dll
+Image Base: 0x75f10000  Image Size: 0x0007b000
+Checksum:   0x00081828  Time Stamp: 0x4a5bda25
+File Size:  486912      File Time:  2009-7-14 09.15.08
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Common Dialogs DLL
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 94
+C:\Windows\system32\SETUPAPI.dll
+Image Base: 0x75f90000  Image Size: 0x0019d000
+Checksum:   0x0019d3ca  Time Stamp: 0x4a5bdafe
+File Size:  1668608     File Time:  2009-7-14 09.16.16
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows 安装程序 API
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 95
+C:\Windows\SYSTEM32\sechost.dll
+Image Base: 0x76130000  Image Size: 0x00019000
+Checksum:   0x00025332  Time Stamp: 0x4a5bdb04
+File Size:  92160       File Time:  2009-7-14 09.16.14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Host for SCM/SDDL/LSA Lookup APIs
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 96
+C:\Windows\system32\CLBCatQ.DLL
+Image Base: 0x76150000  Image Size: 0x00083000
+Checksum:   0x0008558c  Time Stamp: 0x4a5bd9b1
+File Size:  522240      File Time:  2009-7-14 09.15.04
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   COM+ Configuration Catalog
+   FileVer:    2001.12.8530.16385
+   ProdVer:    6.1.7600.16385
+
+Module 97
+C:\Windows\system32\d3d9.dll
+Image Base: 0x761e0000  Image Size: 0x001c3000
+Checksum:   0x001c3fad  Time Stamp: 0x4a5bd9a9
+File Size:  1826816     File Time:  2009-7-14 09.15.10
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Direct3D 9 Runtime
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 98
+C:\Windows\system32\IMM32.DLL
+Image Base: 0x763b0000  Image Size: 0x0001f000
+Checksum:   0x00020b3b  Time Stamp: 0x4a5bda07
+File Size:  118272      File Time:  2009-7-14 09.15.34
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Multi-User Windows IMM32 API Client DLL
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 99
+C:\Windows\system32\iertutil.dll
+Image Base: 0x763d0000  Image Size: 0x001fa000
+Checksum:   0x002022c5  Time Stamp: 0x4d65ea99
+File Size:  2063360     File Time:  2011-2-24 13.29.58
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Windows? Internet Explorer
+   FileDesc:   Run time utility for Internet Explorer
+   FileVer:    8.0.7600.16766
+   ProdVer:    8.0.7600.16766
+
+Module 100
+C:\Windows\system32\RPCRT4.dll
+Image Base: 0x765d0000  Image Size: 0x000a1000
+Checksum:   0x000aeb3b  Time Stamp: 0x4a5bdade
+File Size:  652288      File Time:  2009-7-14 09.16.14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   远程过程调用运行时
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 101
+C:\Windows\system32\PSAPI.DLL
+Image Base: 0x76680000  Image Size: 0x00005000
+Checksum:   0x0000ccd3  Time Stamp: 0x4a5bdace
+File Size:  6144        File Time:  2009-7-14 09.16.14
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Process Status Helper
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 102
+C:\Windows\system32\WININET.dll
+Image Base: 0x76690000  Image Size: 0x000f5000
+Checksum:   0x000f28c2  Time Stamp: 0x4d65ebf7
+File Size:  981504      File Time:  2011-2-24 13.32.46
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Windows? Internet Explorer
+   FileDesc:   Win32 的 Internet 扩展
+   FileVer:    8.0.7600.16766
+   ProdVer:    8.0.7600.16766
+
+Module 103
+C:\Windows\system32\GDI32.dll
+Image Base: 0x76790000  Image Size: 0x0004e000
+Checksum:   0x0004db62  Time Stamp: 0x4a5bd9dd
+File Size:  304640      File Time:  2009-7-14 09.15.24
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   GDI Client DLL
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 104
+C:\Windows\system32\SHELL32.dll
+Image Base: 0x767e0000  Image Size: 0x00c49000
+Checksum:   0x00c49767  Time Stamp: 0x4c4ee5ad
+File Size:  12867584    File Time:  2010-7-27 22.03.26
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows 外壳公用 DLL
+   FileVer:    6.1.7600.16644
+   ProdVer:    6.1.7600.16644
+
+Module 105
+C:\Windows\system32\urlmon.dll
+Image Base: 0x77430000  Image Size: 0x00136000
+Checksum:   0x0012c37c  Time Stamp: 0x4d65ebdf
+File Size:  1228800     File Time:  2011-2-24 13.32.42
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Windows? Internet Explorer
+   FileDesc:   Win32 的 OLE32 扩展
+   FileVer:    8.0.7600.16766
+   ProdVer:    8.0.7600.16766
+
+Module 106
+C:\Windows\system32\USP10.dll
+Image Base: 0x77570000  Image Size: 0x0009d000
+Checksum:   0x000a22e6  Time Stamp: 0x4a5bdb32
+File Size:  627200      File Time:  2009-7-14 09.16.18
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft(R) Uniscribe Unicode script processor
+   FileDesc:   Uniscribe Unicode script processor
+   FileVer:    1.626.7600.16385
+   ProdVer:    1.626.7600.16385
+
+Module 107
+C:\Windows\system32\SHLWAPI.dll
+Image Base: 0x77610000  Image Size: 0x00057000
+Checksum:   0x0005a8d4  Time Stamp: 0x4a5bdb05
+File Size:  350208      File Time:  2009-7-14 09.16.16
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   外壳简易实用工具库
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 108
+C:\Windows\system32\NSI.dll
+Image Base: 0x77670000  Image Size: 0x00006000
+Checksum:   0x00004fe4  Time Stamp: 0x4a5bdad9
+File Size:  8704        File Time:  2009-7-14 09.16.12
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   NSI User-mode interface DLL
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 109
+C:\Windows\system32\uxtheme.dll
+Image Base: 0x77680000  Image Size: 0x00040000
+Checksum:   0x00047dd4  Time Stamp: 0x4a5bdb38
+File Size:  249856      File Time:  2009-12-15 16.57.00
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Microsoft UxTheme 库
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 110
+C:\Windows\system32\MSCTF.dll
+Image Base: 0x77730000  Image Size: 0x000cc000
+Checksum:   0x000cb820  Time Stamp: 0x4a5bda69
+File Size:  828928      File Time:  2009-7-14 09.15.44
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   MSCTF 服务器 DLL
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 111
+C:\Windows\system32\OLEAUT32.dll
+Image Base: 0x77800000  Image Size: 0x0008f000
+Checksum:   0x0008d63a  Time Stamp: 0x4bbc2f3d
+File Size:  571904      File Time:  2010-4-7 15.10.38
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    
+   FileDesc:   
+   FileVer:    6.1.7600.16567
+   ProdVer:    6.1.7600.16567
+
+Module 112
+C:\Windows\system32\kernel32.dll
+Image Base: 0x77890000  Image Size: 0x000d4000
+Checksum:   0x000e0558  Time Stamp: 0x4b1e3897
+File Size:  857088      File Time:  2009-12-8 19.33.32
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows NT 基本 API 客户端 DLL
+   FileVer:    6.1.7600.16481
+   ProdVer:    6.1.7600.16481
+
+Module 113
+C:\Windows\system32\MSVCRT.dll
+Image Base: 0x77980000  Image Size: 0x000ac000
+Checksum:   0x000ae448  Time Stamp: 0x4a5bda6f
+File Size:  690688      File Time:  2009-7-14 09.15.52
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Windows NT CRT DLL
+   FileVer:    7.0.7600.16385
+   ProdVer:    6.1.8638.16385
+
+Module 114
+C:\Windows\SYSTEM32\ntdll.dll
+Image Base: 0x77a30000  Image Size: 0x0013d000
+Checksum:   0x00146db0  Time Stamp: 0x4cc7ab44
+File Size:  1289536     File Time:  2010-10-27 12.40.26
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   NT 层 DLL
+   FileVer:    6.1.7600.16695
+   ProdVer:    6.1.7600.16695
+
+Module 115
+C:\Windows\system32\ADVAPI32.dll
+Image Base: 0x77b70000  Image Size: 0x000a0000
+Checksum:   0x000a29ff  Time Stamp: 0x4a5bd97e
+File Size:  640000      File Time:  2009-7-14 09.14.54
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   高级 Windows 32 基本 API
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+Module 116
+C:\Windows\system32\MSACM32.dll
+Image Base: 0x77c10000  Image Size: 0x00014000
+Checksum:   0x0001dea3  Time Stamp: 0x4a5bda4e
+File Size:  72192       File Time:  2009-7-14 09.15.44
+Version Information:
+   Company:    Microsoft Corporation
+   Product:    Microsoft? Windows? Operating System
+   FileDesc:   Microsoft ACM 音频筛选器
+   FileVer:    6.1.7600.16385
+   ProdVer:    6.1.7600.16385
+
+
+===== [end of  ERRORLOG.TXT] =====

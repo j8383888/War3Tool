@@ -1,0 +1,18 @@
+Rogue Spear QOB importer for Milkshape3D by Peter Sienkiewicz  email: pms2@njit.edu
+
+This plugin imports a QOB model into Milkshape3D. The textures (RSB) need to be manually
+converted in BMP as MS3D doesnt currently support the format.
+
+Note:
+1. Some files make take 10-15 to load, this is because the whole file needs to 
+be parsed, then loaded in.
+2. The Ghost Recon QOB format is not yet supported. I should release a plugin in the future.
+3. An exporter should be out soon for Rogue Spear QOB.
+
+
+Special Thanks:
+
+DragonZap (for his help in understanding the basics of the plugins)
+Mike Schell (help with the understanding of UV coordinates in the QOB files)
+Mete (for writing MS3D :P)
+

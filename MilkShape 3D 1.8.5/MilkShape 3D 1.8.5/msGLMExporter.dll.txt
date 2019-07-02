@@ -1,0 +1,28 @@
+GLM Exporter for Milkshape3D      Ver .2
+by:BoBo Fett bermshot@hotmail.com
+http://jedidreams.codealliance.ca/
+
+Overview:
+
+This is a Plugin that Exports non-animated(*default) Ghoul2 models(.glm) from Milkshape3D.
+
+This plug-in won't support animation or player models until milkshape3d 2.00 is released.
+
+History:
+
+ver. 2 - Dec 6, 2003
+ -Major Update. To many changes to list...
+
+ver. 1 - May 5,2002
+ -early test version
+
+ 
+
+
+You may distribute This zip under these rules:
+
+1)The zip file must contain the original unmodified files.
+2)Must be distributed for free.
+3)If you distribute this file on a web site, CD-ROM or other media you must send notice to the author.
+
+

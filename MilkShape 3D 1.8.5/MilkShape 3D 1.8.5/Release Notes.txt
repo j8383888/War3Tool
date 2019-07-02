@@ -1,0 +1,576 @@
+				
+
+                                MilkShape 3D 1.8.5
+                                   Release Notes
+
+                                       ***
+
+Version 1.8.5 (Jul 08 2009)
+- updated SDK and fileformat: vertex extra data contains now 2 extra values
+- added: ASE export for Unreal static meshes
+- added: FBX 2009.1 support for XNA (import only so far, export in final release)
+
+Version 1.8.4 (Aug 24 2008)
+- fixed: it's now possible to enter a pivot in the TCE
+- fixed: initial normals for create plane, create cylinder and create face
+- added: save/load TCE settings and window placement
+- added: SDK functions: msMaterial_Set/GetDiffuseTextureWidth/Height
+- added: play sound, when pressing the delete group button
+
+Version 1.8.3 (Jun 03 2008)
+- added: import UV coords only for Wavefront .obj. For RoadKill 1.1 UVMapper support.
+- added: Sims PET mesh support
+- added: 'Ignore Alpha' material mode, useful if the alpha channel is used for something other than alpha channel (glow map, etc.)
+- updated: using the latest MDL7 library for GameStudio MDL7 models
+- improved: pivot in TCE (don't set pivot in rotate/scale, update editboxes)
+- added: weld to nearest vertex
+- fixed: filename with dots and without extension was completed wrongly
+- updated: added SDK functions msBone_RemovePositionAt() and msBone_RemoveRotationKeyAt
+
+Version 1.8.2a (Nov 08 2007 --unofficial):
+- improved: SMD import to support nodes with different amount of keys
+
+Version 1.8.2 (Okt 25 2007):
+- added: snap to grid, when moving/scaling/creating geometry
+- added: a warning when saving in animation mode, because it could mess up your animations
+- added: a warning, if the license file could not be written (for those who use DeepFreeze for example)
+- added: scale into option for the scale tool
+- updated: "Tools->Show Model Statistics ..."
+- improved: vertex weight editor
+- added: SDK: added msMaterial_Destroy(), msModel_SetFileName() and msModel_GetFileName()
+- fixed: SDK: fixed memory leaks with comments
+- improved: Texture Coordinate Editor: move, rotate, scale, set pivot with input values
+- added: an animation speed slider
+- added: start / end frame animation editboxes
+
+Version 1.8.1b (Jun 27 2007):
+- improved Windows Vista compatibility
+- fixed a crash when importing Wavefront OBJ files without groups
+- fixed a crash when exporting MD3 files without $sequence tags
+- the *_GetComment API could cut the last character of the comment
+
+Version 1.8.1a (Jun 09 2007):
+- added a new sequence command for MD3 export to be able to name frames
+- fixed a crash with plugins (3ds)
+
+Version 1.8.1 (May 31 2007):
+- updated: latest UniMesh V4.09 plugins for The Sims 2 by Wes Howe (including AutoJoint, MakeSGrps, Normal Data Merge and Vertex Data Merge plugins)
+- added: looped animation for Max Payne 2
+- added: joint size, transparency mode and alpha ref are now saved in the .ms3d file
+- added: new material mode: combine alpha, which is useful for The Sims 2
+- added: lock X and Y when moving/scaling in the Texture Coordinate Editor
+- changed: 'Draw vertex weights' and 'Draw vertices with joint colors' are not persistent anymore
+- changed: double-click a joint in the list to select it
+- fixed: SMD export crashed in certain cases
+- added: new DestroyPlugIn procedure in SDK
+- changed: SDK update to version 1.8.1
+- changed: removed checks for regmon, filemon, etc.
+- added: weighted vertices support for Max Payne2 skd files
+- fixed: couldn't delete comments
+- fixed: check texture filename length and give warning
+- fixed: ms3d starts maximized and resizes to normal quickly (flashes)
+- changed: SMD export: if there is no material assign, then "default.bmp" is used
+- changed: SMD export: if there are no joint assigned to a vertex, then it is assigned to joint 0
+- fixed: SHPathPrepareForWriteA didn't work on Win98
+- fixed: selecting vertices with the ignore backfaces option didn't work
+- changed: trial mode is now optional using the -trial option
+- added: a custom config directory can be set using the -config option (useful to run from memory stick)
+
+Version 1.8.0 (Mar 10 2007):
+- added: vertex weight editor
+- added: vertex weight visualization in viewports
+- added: COLLADA exporter (no skeleton, skin, animation and physics yet)
+- added: vertex extra, can be used for color or other info
+- added: Ke (emissive) parameter for Wavefront OBJ files
+- added: made Subdivide 2 a build-in command and fixed texture coordinate problems
+- fixed: duplicate selection and regroup copy the group comments
+- fixed: correct initial camera values for plugins
+- updated: SDK to 1.8.0 and file format spec
+- updated: The Sims 2 V4.07A plugins by Wes Howe
+- updated: DTSPlus! exporter for the Torque engine by Chris Robertson
+- updated: TCE can now show long group names
+
+Version 1.7.10 (Sep 09 2006):
+- added: move to point, move to center of group/joint
+- added: double-clicking a group selects/deselects it
+- added: double-clicking a material assigns it to selected groups
+- added: FBX export: save center of each group as pivot for groups which are no skinned meshes
+- fixed: Wavefront OBJ import textures with long file names
+- fixed: minor bugfixes and speed improvements
+- updated: Blitz 3D exporter
+
+Version 1.7.9 (Jun 23 2006):
+- added: optional depth sorted triangles
+- added: two-sided lighting for transparent triangles
+- added: transparency mode: alpha reference
+- added: transparent background images are supported now
+- added: reset TCE after scaling and moving the texture
+- added: fit selection in TCE
+- added: optional rotate around selection in 3d viewport.
+- added: show file extension on texture button
+- fixed: small bug in the background image dialog
+- fixed: check + uncheck spheremap disabled transparency
+- fixed: a crash when saving .ms3d with empty groups
+- updated: Blitz3D plugin
+
+Version 1.7.8 (Apr 19 2006):
+- added: group and smoothing group coloring, customizable in groupcolors.txt
+- added: load buggy plugins only once, see buggyplugins.txt
+- fixed: loosing vertex weights after merge, unweld, regroup and duplicate selection
+- fixed: might had wrong comments after merge
+- added: merge now supports merging skeletons, but only if the joint names don't collide
+- fixed: a crash in the A5 MDL export and a bug with multiple groups export
+- fixed: minor bugfixes
+- updated: new The Sims 2 plugins by Wes Howe
+- updated: D3D exporter plugin by GenericBum
+
+Version 1.7.7a (Jan 20 2006):
+- changed: plugins are now loaded only when needed
+- changed: memory usage has been optimized
+- fixed: crash when zooming out with the mouse wheel
+
+Version 1.7.7 (Jan 18 2006):
+- added: Alias FBX import/export (formerly known as Kaydara FiLMBOX)
+- added: The Sims2 import/export plugins by Wes Howe
+- added: bone/skin-weight editor used for The Sims 2, by Wes Howe
+- added: hide selection can now hide joints
+- fixed: plane uv coords corrected for all turn edge options
+- fixed: auto smoothing after creating a plane primitve corrected
+- fixed: Wavefront OBJ import bug with negative vertex indices
+- fixed: saved viewport settings are applied again
+- changed: new logo, icons and installer script by Brody Mulry
+- changed: load 32-bit textures with totally transparent alpha channel without alpha channel
+- changed: SDK supports normals/UV per triangle vertex, which allows import/export without seams
+- changed: SDK supports up to 4 vertex weights (are not used inside MS3D)
+
+Version 1.7.6 (Oct 02 2005):
+- added: plane primitive with different turn edge options
+- added: new close cylinder options: triangle fan and triangle strip
+- updated: SMD texture filename extension won't be renamed to .bmp anymore (HL2 compatibility)
+- fixed: double-click MS3D file should work now
+- fixed: minor bug fixes for ATI OpenGL driver
+
+Version 1.7.5 (Jul 24 2005):
+- fixed: PSK/PSA import/export had a bone orientation bug (thanks a lot to Shinobi for showing me how to fix it!)
+- fixed: a problem with the 3ds importer when importing large 3ds files (also speed improved)
+- fixed: a problem with transparent textures not showing up transparent
+- added: reset settings in the Preferences dialog (no need to manually delete the ms3d.cfg)
+- added: remembers the last paths for file open, save, import, export, textures and others
+- fixed: made debugging custom plugins with the SDK easier.
+
+Version 1.7.4 (Feb 03 2005):
+- move group up, down
+- recent files list behaviour improved
+- comment whole model
+- fixed: BGR/BGRA texture were not displayed properly
+- fixed: bug when deleting texture fixed
+- fixed: flipped and white background images fixed
+- fixed: SMD last frame was dropped
+- fixed: .3ds import when model had no material
+- updated: Blitz Basic B3D exporter
+- added: Motocross Madness SLT exporter by mcm2boys
+- added: BVH importer is licensed back
+- added: Torque DTS exporter
+
+Version 1.7.3 (Jan 24 2005):
+- Mesa 6.2.1 compatibility, optionally enable/disable wglShareLists
+- fixed problem with background image textures
+- Half-Life 2 VTF texture support, thanks to Jed for the VTF extractor!
+- Half-Life 2 SMD support (just 1 vertex weight supported)
+- increased decimal places for HL1/HL2 SMD
+- KF2 _mov files with vertical/horizontal movement only
+- commenting groups, materials and joints is now supported
+- comment support for SDK
+- updated MS3D ASCII importer/exporter
+- fixed 3DS importer/exporter
+- fixed a bug in the Wavefront OBJ importer
+- Wavefront OBJ import now supports negative indices
+- minor bug fixes
+
+Version 1.7.2 (Oct 28 2004):
+- material names memory leak > 32 bytes
+- assign material, no groups selected -> warning
+- select vertices without triangle -> backface only must be ignored
+- MS3D ASCII Importer bug fixes
+- MS3D ASCII Exporter: export no empty names
+- .ms3d file association
+- File->New: resets all viewports
+- SDK: spheremap flag support
+- SDK: camera pos/orientation support
+- installer: write installation path to registry
+- Max Payne 2 support
+- 2. texture filename can be edited again
+- fixed: transparency problem with DDS textures
+- Ctrl+'Delete Selection' deletes faces only (no vertices)
+- added: msSubDivide2 by coldlamper
+- updated: msModelInfo by scorpiomidget
+- updated: msXExporter by John Thompson
+- added: msZero.dll: zero joints by Ioquan
+- added: Doom3 MD5Mesh importer by sanjo
+- added: LucasArt's .3do importer by Zy
+- added: dotXSI3 exporter by Neil 'Jed' Jedrzejewski
+- updated: General Map Exporter 2.2 by Rat
+- added: Ghoul2 GLM Exporter by Bermshot
+- added: Maya ASCII .ma importer by mijacs
+- added: POV-Ray 3.5 Include File exporter by Neil 'Jed' Jedrzejewski
+- added: MD Adjust Keys Plugin 2.1.0 by Rat
+- updated: Tile texture mapper tool plug-in 1.2.0 by Mikko Rytkönen
+- added: Warcraft III MDX Importer v1.1 by UniKorn
+- updated: Yafray plugin by mijacs
+- updated: msASCIIImporter
+- updated: msASCIIExporter
+
+
+Version 1.7.1 (Jul 06 2004):
+- check opengl extension buffer for Geforce FX.
+- shortcuts for plugins didn't work.
+- copy & paste keyframes fixed
+- limit of 100 plugins removed
+- Remove All Keyframes operates on selected joints only.
+- 4 Recent Files
+- BDY import crash fixed
+- Quake1 export no textures message fixed
+- Executing plugins causes the model's skeleton to be drawn regardless of the state of the "Show skeleton" check box.
+- Turn Edge crashes: creating a box, single-selecting one of the faces in the upper left view (without backfaces) and another one in the lower left view
+- option to turn off viewport saving
+- fixed GS MDL4 export bug with textures
+- texture didn't load, when loading from recent file list
+- fixed little bug with transparency slider
+- A6 GameStudio MDL7 import (no animation)
+- A6 GameStudio MDL7 export (no animation)
+- Wavefront OBJ import didn't always load the textures properly.
+- Cancel option, when the application quits.
+- A5 GameStudio MDL5 import
+- bug fixed with plugins and joints.
+- minor bug in MS3D loader.
+- output information on which joints keyframes were set/removed.
+- optionally load/save viewport settings
+- replaced Create Face plugin with buildin command
+- removed bridge and unify plugin at the request of mijacs (they seem to crash on certain machines)
+- restores second texture filename (unused in MS3D)
+
+Version 1.7.0 (Dec 04 2003):
+- MD2 import crashed
+- update vertex buffer after TCE
+- fixed shininess with plugins
+- select group, deselect face, delete -> group deleted
+- fixed: 'not yet implemented' in A5 MDL
+- bg image load crashes, if the image is not there anymore.
+- check opengl extension buffer for Geforce FX.
+- a lot of new plugins!!
+
+Version 1.7.0 Beta3 (Nov 02 2003):
+- Select Group by Material
+- shortcuts for shapes
+- maximize viewport with VK_SPACE
+- PSK skeletons rotated
+- background images were blurry after loading MS3D (needed a reload)
+- duplicate selection had a bug, and it is faster now
+- other minor bugfixes
+
+Version 1.7.0 Beta1-2 (Oct 14 2003):
+- Serious Sam SKA supports now meshes, skeletons and animation.
+- Unreal/UT PSK/PSA support independed of the game.
+- rewrote Half-Life SMD support.
+- remove FreeImage and use DevIL now for image file formats.
+- support for 32-bit texture with alpha channel.
+- *.rgb, *.dds texture are now supported.
+- texture download is now 6 times faster.
+- background images can be any images.
+- max. vertex count has been increased to 65534.
+- max. triangle count has been increased to 65534.
+- max. group count has been increased to 255.
+- increased undo level to 50.
+- joints without children can be rotated now.
+- increased rendering speed.
+- selected triangles are now shown in 3D too.
+- uniform scale added
+- custom grid size added
+- position/scale background image dialog
+
+
+Version 1.6.6 (Apr 12 2003):
+- Added: autosave option, see Preference dialog, disabled by default.
+- Changed: MilkShape 3D now exists, when it detects security harming programs, rather than trying to close them.
+- Included: Text Generator plugin by Craig Musgrave.
+- Included: Q3Radiant MAP exporter by Jochen Winzen.
+- Included: Explode Tool by Ulf Öhlén.
+
+
+Version 1.6.5 (Dec 1 2002):
+- Added: global/local mode for rotating joints, which makes animation a lot easier.
+- Added: customizable shortcuts, menus and plugins using the shortcuts.ini.
+- Added: added shortcuts for Reverse Vertex Order, X, Y, Z and other tool options.
+- Added: new plugin types: Edit, Vertex, Face and Animate.
+- Added: ShortCut & Plugin Manager to edit the shortcuts.ini
+- Added: UT 2003 reference skeletons.
+- Fixed: deleting selected vertices doesn't remove all unreferenced vertices.
+- Fixed: using the Delete key in editboxes won't delete the current selection.
+- Included: plugins by mijacs: Bridge, Unify, Manual Edit and SelPolyCount.
+- Included: plugin by Taharez: Height Map.
+- Included: plugins by Mikko Rytkönen: Lathe, Tile Texture Mapper.
+- Included: plugins by scorpiomidget: MOHAA Plugins, Model Information.
+- Included: plugin by cam129: Terrain Generator.
+- Included: plugins by CCCP: LWO 5.x and 6.0+ importer/exporter.
+- Included: NovodeX plugin.
+- Included: Battlefield 1942 plugins by Brian Holinka.
+- Included: DirectX 8 Mesh Tools: progressive mesh, tesselate mesh and load simple .x files.
+
+Version 1.6.4 (Sep 20 2002):
+- Added: Content, Index and Search help menu commands. If the new helpfile is not installed yet, it can be downloaded.
+- Added: Spheremap support for materials.
+- Added: new Spherify command, with optional x, y, z lock.
+- Added: LithTech LTA importer, which imports all shapes and the skeleton. This importer is still experimental.
+- Added: Scene Description Format (SDF) export.
+- Fixed: Smooth All is now quite fast: 15326 faces need now 0.4secs instead of 27.7secs
+- Fixed: the 3DS exporter overwrote materials or meshes, when there were name collisions.
+- Fixed: the scene will now be 'framed all' after an import plugin only.
+- Fixed: transparent materials are now rendered transparent also when no texture is set.
+- Fixed: Unreal PSK Importer crashed in certain circumstances
+- Fixed: under WinXP, the control panel was white instead of the default GUI color.
+- Fixed: some minor bug fixes.
+
+Version 1.6.3 (Aug 12 2002):
+- Added: Unweld Vertex, useful for detaching faces or adding detail.
+- Added: Unweld Vertex Radial.
+- Added: ms3d.exe.manifest, which allows Luna controls under WinXP.
+- Replaced: msGLMImporter.dll, DLL will be unloaded again.
+- Fixed: extrude tool doesn't try to extrude vertices, when no triangles are selected.
+- Changed: OpenGL errors are not logged into the ms3d.log, which could result in huge ms3d.log files.
+- Updated: Kratisto's Half-Life MDL Decompiler v1.01.
+
+Version 1.6.2 (Jul 21 2002):
+- Fixed: msGLMImporter.dll doesn't unload correctly.  It temporarily won't be unloaded now.
+
+Version 1.6.1 (Jul 12 2002):
+- Fixed: "Record AVI..." sometimes failed to record.
+- Fixed: "Record AVI..." didn't add a .avi extension, when it was missing.
+- Fixed: "Take Screenshot..." didn't add a .bmp extension, when it was missing.
+- Fixed: Unreal Engine PSK exporter didn't show up in the export menu.
+- Added: Kratisto's UnMDL Half-Life decompiler plugin tool.
+- Added: Bermshot's Ghoul2 .glm importer (can be used for JK2, SOF2)
+
+Version 1.6.0 (Jun 16 2002):
+- Added: Viewpoint Experience Exporter with Preview
+- Added: Serious Sam SKA Mesh import/export
+- Added: BlitzBasic 3D exporter by Mark Sibly
+- Updated: DirectX 8 exporter by John Thompson
+- Added: Take Screenshot
+- Added: Record AVI
+- Fixed: unlimited frames for A5 GameStudio export
+- Trial period restarts: please re-enter your registration code.
+
+Version 1.5.10 (Mar 03 2002):
+- Added: A5 GameStudio import/export
+- Added: Edit Vertex. Edit X, Y, Z values of a selected vertex.
+- Updated: DirectX 8 exporter by John Thompson
+- Added: RtCW MDC import by sanjo
+- Added: RtCW MDC import /w automatic texture import by SileNT
+- Added: Kingpin MDX importer by TiCaL
+- Added: Orbiter Mesh ASCII Exporter by Nicholas Musurca
+- Added: Rogue Spear QOB importer by Peter Sienkiewicz
+- Added: SOFTIMAGE|XSI importer by Dominic Laflamme
+- nothing else has changed
+
+Version 1.5.9 (Nov 09 2001):
+- Fixed: Can export Max Payne KF2 Weapons now.
+- Fixed: A silly message box popped up during Max Payne KF2 export.
+- Changed: Quake II MD2 export: maximum number of frames is now 4096.
+- Changed: Made debugger checks less strict.
+
+Version 1.5.8 (Oct 16 2001):
+- Added: Max Payne import KF2/KFS/SKD
+- Added: Max Payne export KF2/KFS/SKD
+- Added: The Sims SKN import (build-in)
+- Added: The Sims SKN export (build-in)
+- Added: 3D viewport: added select groups/joints when holding down ALT to the
+	 already existing select vertex, face by vertex.
+- Added: BVH importer (BioVision Hierarchy) by Keith Harrison.  This plugin is
+	 shareware, and should be registered to support further development. See
+	 msBVHImporter.txt.
+- Fixed: zoom/panning in the perspective viewports behave better, when zoomed
+	 very closely.
+- Updated: DirectX exporter by John Thompson.
+
+Version 1.5.7 (Jul 16 2001):
+- Added: Serious Sam export (automatic LWO 6.5x/SCR with frames).
+- Added: LWO 6.5x export (can export meshes, uv maps, material and textures).
+- Added: Serious Sam import.
+- Added: Serious Sam texture loader.
+- Added: Both DirectX exporters by John Thompson and Matthew Scott.
+- Added: DargonZap's Reverse Animation and Scale All plugins.
+- Fixed: MS3D doesn't crash anymore, if the creation of the GL context fails.
+- Fixed: bug in MS3D loader, which sometimes moved a triangle to another group. 
+- Fixed: MS3D sometimes crashes, when exiting.
+- Changed: It is possible again to export OBJ, LWO 6.5x meshes at the current frame.
+
+Version 1.5.6 (May 30 2001):
+- Added: bones/joints are colored differently, when they have a key at the current time.
+- Added: mouse wheel support for orthogonal and perspective viewports. Use the SHIFT
+  modifier to zoom in/out 10 times faster.
+- Added: middle mouse button support for panning viewports.
+- Added: FatBoy plugin by DragonZap. For making models fatter or thinner.
+- Added: latest VRML 97 exporter by Roland Smeenk. This update adds some extra
+  exporter options for formatting the output. Animation can be exported
+  (coordinateinterpolator) and it is now possible to export Hanim 1.2
+  (skinned mesh) compliant models.
+- Updated: TMD importer and Smooth Edge plugins by DragonZap.
+
+Version 1.5.5 (Apr 25 2001):
+- Changed: background images move with the grid now.
+- Fixed: SMD import can append at current time again.
+- Included MSVCP60.DLL, which is use by some plugins.
+- Included new icon from Jason Collins, old one is still available.
+- Minor fixes
+
+Version 1.5.4 (Apr 17 2001):
+- Updated: latest versions of DragonZap's plugins
+- Added: animation scale plugin by Dirk Ulbricht.
+- Changed: paths are saved relativly.
+- I can  see the material ball under Win2k and Win98SE. I hope it works for other too ;-)
+
+Version 1.5.3 (Apr 06 2001):
+- Added: "Mirror All" tool plugin by DragonZap, dragonzap1@aol.com.
+- Added: "Smooth Edge" tool plugin by DragonZap, dragonzap1@aol.com.
+- Added: PlayStation TMD importer plugin by DragonZap, dragonzap1@aol.com.
+- Added: tool plugins are undoable now.
+- Changed: LightWave LWO importer doesn't check for the 'FORMS' and 'LWOB'
+  chunks anymore.  Some files, which couldn't be loaded can be loaded now.
+- Fixed: zero length joint names are not allowed anymore.
+- Fixed: If you delete a joint, all vertices assigned to that joint become
+  unassigned.
+- Fixed: If you save and then export, you are not asked to save your model,
+  when you close MilkShape 3D.
+- Changed: If you load from the shell, then the directory of the new file
+  becomes the current working directory.
+- Fixed: some memory leaks caused by the mxToolKit.
+
+Version 1.5.2 (Mar 03 2001):
+- Added: Lithium UnWrapper LUV Importer
+- Added: Divide Edge (divide the edge between 2 vertices)
+- Fixed: minor fixes with material id's
+
+Version 1.5.1 (Feb 17 2001):
+- Added: Progressive Mesh Tool PlugIn
+- Added: Enhanced SDK to support custom tools like modifiers
+- Updated: SDK to version 1.3
+
+Version 1.5.0 (Feb 15 2001):
+- Fixed: regroup did just the same as duplicate selection.
+- Fixed: wild joints on open file with animation mode on.
+- Added: Unreal Tournament Skeletal System PSK exporter/import plugins
+- Added: Handy .uc, .int generator in PSK exporter
+- Added: 2 new commands: Tools->Unreal Tournament->Load Default Male Skeleton
+         and Load Default Female Skeleton.
+- Added: final importer plugin for No One Lives Forever.
+- Added: exporter plugin for No One Lives Forever.
+- Updated: latest Nebula Engine exporter by Dirk Ulbricht.
+- Trial Period restarts.
+
+Version 1.4.5 (Feb 02 2001):
+- Added: NOLF importer.  Imports meshes and skeletons.
+- Added: Lithtech's DTX image file format. Using Stefan Bolders DTX class.
+         (http://www.BlackAngel-Software.com/)
+- Added: included the Nebula Engine exporter by Dirk Ulbricht.
+
+Version 1.4.4 (Jan 29 2001):
+- Fixed: regroup selected faces sometimes removed a triangle from another group.
+- Fixed: MD2 export: the 2. skin should be correct now.
+- Fixed: phantom vertices shouldn't happend anymore.
+- Fixed: when doing shell exectution of a .ms3d file, it was called untitled.ms3d.
+- Fixed: .ms3d.ms3d extensions shouldn't happen anymore.
+- Fixed: crazy joints during IO shouldn't happen anymore, even animation mode on.
+- Added: included the latest NOD importer/exporter by Yith
+
+Version 1.4.3 (Dec 2000):
+- Fixed: Q3A export crashed, when you had a lot of frames to export.
+- Fixed: MilkShape 3D crashes after querying the GL_EXTENSIONS string for
+         newer Geforce cards.  Geforce has so many extensions ;-)
+- Added: added the VRML97 Exporter made by Roland Smeenk
+
+Version 1.4.2:
+- Fixed: background images: can load for all orthogonal viewports,
+         doesn't move around, when panning.
+- Fixed: when shift-selecting, the selectionbox wasn't drawn.
+
+Version 1.4.1 (Aug 16 2000):
+- Added: 3d viewport selection for vertices and faces by vertex
+- Added: optional close cylinder
+- Added: Vampire: the Masquerade NOD exporter and importer (both without bones yet)
+- Changed: any file formats can be loaded for the background image
+- Fixed: texture coordinates on seam in Quake MDL Export
+- Once again: the trial period restarts
+
+Notes:
+- To use the 3d viewport selection, activate the Select tool and hold down the
+  Alt key.  Only vertices and faces by vertex can be selected, other select modes
+  like Ignore backfaces, group, joint are not yet possible.
+- For some reasons, it is just possible to choose a background image for the front
+  view.
+- The Quake MDL export uses the same .qc file format like the modelgen.exe in the Q1 SDK
+
+Version 1.4.0 (Jun 03 2000):
+- Fixed: Wavefront OBJ export had .3ds extension
+- Fixed: no more 100% CPU usage, only in play mode
+- Fixed: bug in new material
+- Fixed: small bug in remove triangle, which sometimes accidently
+  removed the first triangle of a group
+- Added: goto prev/next keyframe for a selected joint
+- Improved material rendering
+- Improved flat shading
+- Quake1 MDL export
+- Quake1 MDL: added skip command, which skips the current frame
+- Quake2 MD2: fixed texture coordinate bug in export
+- Quake2 MD2: improved frame exporting
+- Quake III Arena: extended the $frames command
+- Quake III Arena: fixed MD3 import
+- MS3D: save total frames
+- included RenderMan RIB exporter
+- update SDK (file format spec) to 1.2
+- uploaded Mesa 3.1 (OpenGL) drivers
+
+Version 1.3.2 (May 2000):
+- Fixed texture coordinate bug.
+- Added an ms3d.log, which can be sent back to me, if you have startup problems.
+- Replaced the .3ds import/export by completly new plugins.
+- Updated SDK to v1.1, update file format spec.
+- Added file format spec for MilkShape 3D ASCII to the SDK.
+- Enhanced decompile MDL: you can decompile the parts you want (reference, sequences, textures, .qc-file)
+- trial period restarts
+- you can optionally disable line stippling, if you don't see the selection boxes
+
+
+Version 1.3.1:
+- Fixed the .MS3D open bug.
+- Added more image file formats like jpeg, tiff, pbm, pgm, png, pcd and ico.
+- You can choose now, wether you want to decompile the reference.smd or the
+  animation.smd.
+
+Version 1.3.0:
+
+- Export SDK (allows to export model data, no other specials yet)
+- Transparency
+- Alpha texture map
+- optimized .ms3d file format (just open old one and resave)
+
+Version 1.2.1:
+
+- 30 days trial period restarts. Users with an expired version can check out the
+  latest stuff.
+
+Version 1.2.0:
+
+- Full Quake III Arena MD3 export.  Take a look at the small starter tutorial on the
+  MilkShape 3D page on http://www.swissquake.ch/chumbalum-soft/
+- Note: the MD3 import isn't finished yet
+- Generate MD3 export control file (see small starter tutorial)
+- Append Frames on SMD import
+- Added map_Kd to Wavefront OBJ import/export
+- Export Wavefront OBJ on current frame
+- MD2 $origin and $rotate commands
+- CS Decompile option for left and right handed weapons
+- Print mins, maxs and center of the model
+- fixed joint nameing bug
+- fixed joint paste - set keyframe bug
+
+----------

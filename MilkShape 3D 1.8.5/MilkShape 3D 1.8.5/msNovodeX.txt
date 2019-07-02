@@ -1,0 +1,108 @@
+
+MilkShape 3D NovodeX Object Description Script Tool
+===================================================
+
+Copyright (C) 2002 Mete Ciragan
+mciragan@smile.ch
+
+Use at your own risk!
+
+
+
+License
+-------
+
+This exporter is freeware.
+
+
+
+Usage
+-----
+
+Close MilkShape 3D and copy the msNovodeX.dll into the directory of ms3d.exe.
+
+The physics specific information is encoded into the group/joint name in form of tags.
+Each group/joint name can have a maximum of 31 characters, so try to keep the names short.
+Each group must have one material assigned.  That material can optionally have a texture,
+which must be in the output directory. The tool will export a lot of ODS files, which can
+be opened in a text editor like Notepad.
+
+The resulting scene may be viewed with the viewer available at http://www.novodex.com.
+
+
+Tags
+----
+
+To encode tags into a group/joint name, use the following syntax:
+
+	<group/joint name>:<tag[=value]>,<tag[=value]>,...
+
+i.e:
+
+	Box01:m=10,f=0,r=1
+
+
+
+Group Tags
+----------
+
+sp:	the group is a spherical object and will have a bounding sphere instead of a bounding
+	box and spherical inertia.
+tm:     the group will have mesh-mesh collision (TriangleMesh)
+m:	mass
+r:	restitutiom
+f:	friction
+s:	scale
+
+Examples:	Sphere01:sp,m=10,r=0.8,f=0.6,s=1
+		Box01:m=100,r=1
+
+
+
+Joint Tags
+----------
+
+t:	type: sp = spherical, hi = hinge, pr = prismatic, sl = sliding
+b:	bodies: <groupname>;<groupname>, <groupname> can also be WORLD.
+d:	direction: any normalized direction vector in form of x;y;z
+br:	breakable: 0 for unbreakable
+
+Examples:	j1:t=sp,b=WORLD;Box01,br=90
+		j2:t=hi,b=Box01;Box02,d=1;0;0
+		j3:t=sl,b=Box02;Box03,d=0;0;1
+
+
+
+Notes
+-----
+
+* A full featured exporter might be available in MilkShape 3D 2.0, without the
+clumsy tags.
+
+* To generate the samples, open the .ms3d file and run the menu command
+Tools->NovodeX Object Description Script ODS...
+
+* Don't create joint hierarchies. Make sure each joint has no parent.
+
+* If you have long objects, let them have spherical inertia.
+
+* To view a NovodeX demo, create a desktop shortcut for the "NovodeX Viewer" and
+drag the demo.pds.ods onto that shortcut.
+
+
+
+Feedback
+--------
+Send feedback to mciragan@smile.ch
+
+
+
+Version History
+---------------
+1.00 Initial Release
+
+
+
+==========================================================
+All Trademarks are the property of their respective owners
+==========================================================

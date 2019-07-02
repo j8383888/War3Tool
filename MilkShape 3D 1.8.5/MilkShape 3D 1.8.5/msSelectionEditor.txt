@@ -1,0 +1,95 @@
+msSelectionEditor Beta Release Notes 
+__________________________________________________
+
+July 25th, 2003
+
+DISCLAIMER: 
+
+Every effort has been made to make
+this plugin data safe and bug free.
+
+However, use this plugin at your own 
+risk! I am not responsible for any
+disasters you might encounter while
+using this plugin.  Back up your 
+models frequently!
+
+Requirements:
+
+DirectX 8 -OR- 9
+MilkShape 3D
+3D Hardware Acceleration?
+
+Installation Instructions:
+
+Depending on whether you have DirectX 8 or 9
+installed, put the following dll in your
+Milkshape directory with the rest of the
+plugins:
+
+msSelectionEditor8.dll for DirectX 8
+msSelectionEditor.dll for DirectX 9
+
+__________________________________________________
+
+Version 093 History
+__________________________________________________
+
+- Fixed: Selection w/ Ctrl+left mouse btn down flicker
+- Added: Startup dialog to automatically add the 
+  plugin to shortcuts.ini if it isn't already in 
+  there. (It adds it to the *bottom* of shortcuts.ini)
+- Added: Created DirectX 8 version (msSelectionEditor8.dll)
+- Added: On cancel, the plugin calls msModel_Destroy 
+  to toss any changes (including the unwelding of the verts)
+- Fixed: Locked the zoom from going negative
+- Added: Dynamic scaling for all size models
+- Added: Automatic centering of models at 0,0,0 origin
+- Fixed: Orientation of model in view at startup
+- Fixed: Extended far clip plane
+- Changed: Initial outline and lighting colors/alpha.
+- Added: Reset View button (Rat's idea, Thanks!)
+- Added: Background Color adjustment
+- Fixed: Normals drawing black (unlit) at times.
+
+__________________________________________________
+
+Version 092 History
+__________________________________________________
+
+- Initial release
+
+
+__________________________________________________
+
+Known Issues for Ver 0.93 beta (TODO list)
+
+
+1. Only bmp, dds, dib, jpg, png, and tga texture
+   formats are currently supported.  (This will be
+   fixed in a future release)
+
+2. Vertex selection mode is not finished.
+
+3. Flat shading uses vertex normals instead of
+   face normals.
+
+4. As with all plugins, you will need to re-weld
+   your vertices after using Selection Editor.
+
+5. Please report bugs to the SDK forum where you
+   downloaded this plugin from.
+
+   http://www.swissquake.ch/chumbalum-soft/forum/
+   forumdisplay.php3?s=&forumid=5
+
+6. Give me your suggestions!  I can't promise all 
+   will make it in, but I'd like to make this 
+   plugin as useful as possible.
+
+
+Author: Andrew "MrScary" Welch
+andrew@braindrain.com
+http://www.braindrain.com
+
+

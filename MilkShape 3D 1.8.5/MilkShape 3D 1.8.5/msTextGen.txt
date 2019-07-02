@@ -1,0 +1,61 @@
+==================
+    msTextGen
+   Version 1.0
+==================
+
+
+DESCRIPTION
+==================
+This is a 3d text generator for Milkshape3d.
+
+
+REQUIREMENTS
+==================
+ - Milkshape3d registered or unregistered versions v1.x.x
+
+
+INSTALLATION
+==================
+ - Unzip the contents of this file into the directory in which
+   you have installed Milkshape3d. This will usually be
+   something like: "C:\Program Files\MilkShape 3D 1.6.2"
+   replacing '1.6.2' with the version of ms3d you are using.
+ - Now start Milkshape3d, and you should see a new entry in
+   the tools menu called 'Text Generator'.
+
+
+LIMITATIONS
+==================
+Milkshape3d is a low poly modeller. As such, only a relatively
+low (compared to other apps) number of polygons can be created.
+This limits the length of the text you can create, depending on
+which font you use.
+
+
+CONTACT
+==================
+Author: Craig Musgrave
+Email: me@logarithmic.co.uk
+URL: http://www.logarithmic.co.uk
+
+
+DISCLAMER/LICENCE
+==================
+This program is free! If you have paid for it, let me know, so
+I can take appropriate action.
+
+You are allowed to distribute this program freely as long as it is 
+not for profit and this readme file is intact and unmodified.
+However, I would really appreciate it if you could let me know if
+you distribute it, as I like to know how far my stuff gets.
+
+If you have any problems with this app, find any bugs or have any
+feature requests, please let me know and I will do my best to help.
+
+The author assumes no liability for damages, direct or consequential, 
+which may result from the use of this program.
+
+All trademarks and trade names are properties of their respective 
+owners.
+
+Copyright© Craig Musgrave 2002.  All Rights Reserved.

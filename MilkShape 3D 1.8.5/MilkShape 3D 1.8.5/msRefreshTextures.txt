@@ -1,0 +1,47 @@
+Texture Refresh Plugin (msRefreshTextures.dll) for MilkShape 3D
+By Heliophobe (mrscreen@hotmail.com)
+===============================================================
+
+Description:
+------------
+Adds a menu item to your Edit menu called 'Refresh Textures.'
+This plugin will cause MilkShape 3D to reload all your diffuse and alpha texture images. 
+The reloaded textures will be instantly visible in your textured viewports.
+
+Just the thing if you want to fine tune your textures in a paint program, and quickly see the results on your model.
+Previously, you had to either reload the model in MilkShape, or reselect the texture file in the materials editor.
+
+Installation:
+-------------
+Before installation, you might want to check if your version of MilkShape already has a function to reload textures.
+As of version 1.6.5, this feature did not exist, but the author may choose to add it to future versions. If so, 
+you don't need to install this plugin.
+
+As with all MilkShape Plugins, just copy the plugin file (msRefreshTextures.dll) to your current MilkShape directory.
+In most cases, that will be 'c:\Program Files\MilkShape 1.x.x', where 1.x.x is the current version. Refresh Textures will
+be available next to you start Milkshape.
+
+
+Usage:
+------
+
+Just select 'Refresh Textures' from the Edit menu after saving your changes to your model in your paint program. If you
+don't see the result of your changes with in a second or two, check to see that the texture you're editting in your paint 
+program is the same one that you have selected for your texture, and make sure you remembered to save.
+
+Note that MilkShape will consider the model to have been modified if you refresh your textures, so when you close your model,
+it will ask if you want to save your changes, even if you haven't made any. This is because of the way the plugin tricks
+MilkShape into reloading your textures. It's the same as reselecting each file from the Materials tool, except the plugin does 
+it for you. 
+
+History:
+--------
+12-5-2002: Added underscore to the R in the menu item name, so you can quickly refresh with Alt-E, R.
+12-4-2002: Initial release
+
+Contact:
+--------
+Email me at mrscreen@hotmail.com if you have any questions or a bug report, or post it on the MilkShape forums at:
+
+http://www.swissquake.ch/chumbalum-soft
+

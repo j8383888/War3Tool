@@ -1,0 +1,133 @@
+*****************************************
+* SMD Adjust Keys Plugin for MilkShape 3D
+*      by Rick J. Kelley AKA Rat 
+*              9-24-04 
+*            Version 2.1.0
+*****************************************
+
+Description:
+	This plugin is an extension to help with keyframe movement, rotation,
+	deletion and copy of a number of a keyframes. This only works
+	correctly on the SMD format, and will give unpredictable results
+	if you load in another animation format like the MS3D file format.
+
+	Why would this be useful? When I was working on several custom made
+	animation, I forgot about the models origin, and several of my new
+	animations looked like the model was instantly move either forward
+	or backward when they were played. Frustrated, I exported them as
+	a SMD, then adjusted the Z axis on its root bone on all keyframes.
+	you could imagine the frustration this would cause if I had to do
+	this manually, one keyframe at a time. So this was how this handy
+	little plugin was conceived! I next moved on to make a copy function
+	to allow a user to copy and paste a range of keyframes, rather than
+	use the one keyframe at a time copy and paste method. (Presently,
+	this function if used on the last keyframe of the SMD seems to
+	incorrectly paste the to the last keyframe, as it seems to be
+	dead. You could paste the joints keyframes to this dead keyframe
+	to correct this and then use this tool).
+
+Installation:
+	Extract the contents of this zip file to your MilkShape 3D directory. 
+
+Instructions:
+	To use this plugin, you need to first select at least 1 joint, 
+	then go to the Animate->SMD Adjust Keys... menu command to start to use
+	the tool.
+
+	To move joint(s) a certain amount for each keyframe in the range you
+	chose, select some joints, then activate this tool. Click on the
+	"Move" radio button. You will notice 3 Axis text boxes that allows
+	you to type in your movement amount on the joints axis. (Presently
+	the movement works off the joints axis, and not in the world axis,
+	hopefully I will be able to fix this in the near future). You also
+	have a StartFrame and a EndFrame choice to type in. It will default
+	to the first keyframe as the StartFrame, and the last one in the
+	EndFrame. Once you have typed in your values, click the OK button
+	to watch the magic happen.
+
+	To rotate joint(s) a certain amount for each keyframe in the range you
+	chose, select some joints, then activate this tool. Click on the
+	"Rotate" radio button. You will notice 3 Axis text boxes that allows
+	you to type in your rotation amount on the joints axis. (This also
+	works of the axis of the joint). You also have a StartFrame and a
+	EndFrame choice to type in. It will default to the first keyframe as
+	the StartFrame, and the last one in the EndFrame. Once you have typed
+	in your values, click the OK button to make it so.
+
+	If you wish to copy a range of keyframes, select some joints, and then
+	activate this tool. Click on the "Copy" radio button. Type in a start
+	frame number, and a end frame number, and a destination or first
+	keyframe you wish to paste the keyframe range to. (You can actually
+	type in a number higher than the existing keyframe range as shown on
+	the keyframe slider at the bottom of the Milkshape 3D program).
+
+	To Reverse a animation, or a portion of a animation, first select some
+	joints, then activate this tool. Click on the "Reverse" radio button.
+	(Please read Known Bugs about a possible crash that could happen in
+	some cases). Type in a start frame number, and a end frame number. Once
+	you have typed in your values, click on the OK button to accept.
+
+	You may have noted the Paste Opposite radio button and wonder why it is
+	greyed out. This is a planned future addition that presently not working.
+	I have some of the code worked out, but not enough to get excited about
+	yet. Perhaps soon it will be working!
+	
+Important Notes:
+	This plugin is far from done, as I expect to add the already mentioned
+	Paste Opposite command that will allow for a copy and paste to right
+	and left portions of a skeleton that are named in a similar fashion.
+
+Known Bugs:
+	If you use a range of keyframes with selected joints that have no
+	keyframe data to begin with, and you use the reverse keyframe function
+	it could cause Milkshape 3D to crash. There is nothing that can be
+	done about this as its how the SDK for Milkshape reacts to trying to
+	work on a keyframe that is not there. A work around would be to first
+	export what you already have to a SMD file, then import it into the
+	Milkshape program to try a reverse. This causes Milkshape to write out
+	keyframe data for each keyframe for every joint.
+
+	The plugin may give some results that may or may not be what is expected.
+	This is due to several factors, as to my understanding of how the
+	animation matrix of Milkshape works and its SDK, and some quirky things
+	that can happen when you toss in a bunch of numbers in a basket, and
+	shake them up to see what will emerge!
+
+Contact Information:
+	If you have any comments, suggestions, or bug reports of this plugin,
+	please contact me at:
+				rat@drawcad.com    or    rickjkelley@yahoo.com
+
+Credits:
+	SMD Adjust Keys Plugin for Milkshape 3D was created by Rick J. Kelley.
+	Special thanks to Jebus for his ideas on Joint Selection detection!
+
+
+Build History:
+
+Version 2.1.0 - 9/24/04
+------------------------
+Fixed a problem that I hadnt noticed about the way input is recieved. It was
+expecting whole numbers instead of using floats. Fixed it for finer tuning of
+movement, and rotations.
+
+Version 2.0.0 - 8/06/04
+------------------------
+Change how the code works to sort through multiple instances of selected
+joints in the Move, and Rotate functions. Added a Reverse function for
+selected joints over a range.
+
+Version 1.2.0 - 8/04/04
+------------------------
+Added delete to a range of keyframes. Added insert of a range of keyframes.
+Changed where you find this plugin on the menu items to the Animate drop
+down section, where it makes more sense to find it!
+
+Version 1.1.0 - 8/02/04
+------------------------
+Added copy to a range of keyframes.
+
+Version 1.0.0 - 7/14/04
+------------------------
+Initial Beta Release! Start of the new plugin for keyframe editing!
+

@@ -1,0 +1,14 @@
+msSelPolyCount v1.0
+
+What does it do?
+It shows the selected polygon count, the selected vertices count, the selected and unique vertices count, and it also shows you how many polygons there are per group.
+
+Bugs:
+I hope not.
+
+TODO:
+Can't think of anything more to add to it.
+
+
+--mijacs
+tomijacs@yahoo.com

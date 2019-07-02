@@ -1,0 +1,16 @@
+Milkshape RTCW MDC Import Plug-In (c) 2002 sanjo, sanjo@post.com
+
+
+This plug-in for is provided as it is, and I take no responsibility for any damage it may cause!
+
+this simple plug-in imports ReturnToCastleWolfenstein MDC files.
+
+
+credits:
+Gray Matter Interactive, Nerve Software and id Software. 
+
+Chris Cookson from gmax.digitalarenas.com, for providing a cool rtcw gmax import script.
+
+
+Version: 
+1.0  initial release

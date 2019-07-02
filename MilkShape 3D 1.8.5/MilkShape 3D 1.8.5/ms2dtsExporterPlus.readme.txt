@@ -1,0 +1,43 @@
+Last updated: 30/01/07
+
+Features:
+- Triangle stripper
+- Multiple collision meshes
+- LOS collision meshes
+- Full level of detail control
+- Blended animations
+- Mesh visibility animation
+- Easy to use sequence/mesh/material property editor
+- IFL material support
+- Animation triggers
+- DSQ Export to one or multiple files
+- Auto bounding box mesh creation
+- Auto .cs file generation
+
+Notes:
+
+LOD
+The exporter supports any number of detail levels per mesh. Detail levels are stored as numbers at the end of the mesh name. If your meshes already have numbers at the end of their name, you will need to add a non numerical character at the end, or they will be interpreted as LOD. eg.
+
+body0 will produce a mesh called 'body' with detail level 0
+foot12_5 will produce a mesh called 'foot12_' with detail level 5
+
+The original milkshape exporter output shapes with all visible meshes at detail level 0. If you are not making use of LOD, this is the best value to give to visible meshes. Meshes with a negative LOD will be exported but are not visible (eg collision meshes).
+
+Sequences
+The Sequence special material naming convention has changed, as there is much more information stored for each sequence. Old sequence names are supported, but will be converted to the new convention when you apply changes to the model. All sequence properties are stored in the material comment string (see documentation for more details).
+
+The best way to edit sequences is via the exporter dialog. Just add/select a sequence, then press the Edit button.
+
+DSQ Export
+This may not be 100% functional.....see note in the documentation.
+
+Configuration Files
+The exporter supports configuration files using the same format as 3dsmax. The configuration file should use the same name as the exported dts shape. eg. use a configuration file called shape.cfg when exporting shape.dts. For most shapes you will not need to use a configuration file, the defaults provided by the exporter will be sufficient.
+
+Documentation
+Some alpha documentation is located within the zip file. It is based mostly on the existing 3dsmax/maya documentation and is still a work in progress. If you find any errors, or would like to add something (especially an example!), please feel free to contact me.
+
+Known Issues:
+- Alpha sorting is supported (in that sorted meshes are passed through the sorting code), but I have not actually seen it working yet. When you view a sorted mesh in the show tool, some of the faces have been split (the poly count goes up), but the faces still appear sorted incorrectly. I do not think this is an issue with the exporter, but rather with the mesh sorting code.
+- The Milkshape SDK does not support shared vertices between mesh groups, so after exporting, seams may appear in the milkshape model that are not present in the exported model. This is easily resolved by selecting the verts and rewelding.
