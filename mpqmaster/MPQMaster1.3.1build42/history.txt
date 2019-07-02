@@ -1,0 +1,72 @@
+2005-07-21 v1.3.1 build 42
+==========================
+[+] Added overwrite prompt on adding/extracting files(with LangAPI updated)
+[!] Fixed crashs caused by interface problem of MpqLib updating
+
+2005-07-19 v1.3.0 build 40
+==========================
+[+] Updated MpqLib to support single block files and bzip2 compressed blocks
+[!] Fixed some minor bugs and some flags
+
+2005-03-19 v1.2.0 build 36
+==========================
+[+] Added some toolbar buttons and changed toolbar icons
+[+] Added Russian language file (authored by Stinger)
+[!] Updated TFT listfile to only list TFT files
+[!] Fixed Language switch bug
+[!] Fixed bugs in compact/flush function(MpqLib.dll)
+[!] Fixed menu view style selection
+
+2005-02-28 v1.1.0 build 34
+==========================
+[o] Release with Language API (with English language sample)
+[+] Auto-detect preview style(text mode or binary mode)
+[+] Added history item in menu
+[!] Fixed crash on double click at file list
+[!] Fixed version info in executable binary
+
+2005-02-08 v1.0.0 build 31
+==========================
+[!] Fixed language translation problem
+[!] Changed listfile selecting style
+
+2005-02-04 v0.9.1 build 28
+==========================
+[+] Added some options to ini file for settings storage
+[!] Minor bug fix
+[!] Changed MPQ Lib to support highest compression of zlib in multi type compression
+
+2005-02-04 v0.9.0 build 26
+==========================
+[o] First public release
+[+] Completed Listfile GUI/Menu Item
+[+] Fixed some bugs
+
+2005-02-03 v0.8.0 build 23
+==========================
+[o] First stable beta version
+[+] Completed GUI
+[+] Added multilanguage function(with API Interface)
+
+2005-02-02 v0.5.0 build 15
+==========================
+[o] Last alpha version
+[+] Fixed MpqLib again
+[+] Added more GUI elements
+
+2005-02-01 v0.3.0 build 9
+=========================
+[o] Alpha version of all functions
+[!] Fixed Writable functions
+[!] Fixed MpqLib
+
+2005-01-27 v0.1.0 build 4
+=========================
+[o] Period test alpha version
+[+] Read functions completed
+
+2005-01-22 v0.0.1 build 1
+=========================
+[o] Speed test alpha
+[+] MpqLib
+[+] Basic GUI
