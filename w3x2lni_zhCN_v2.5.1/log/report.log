@@ -3,7 +3,7 @@
 输入格式：Mpq
 输出模式：slk
 结果：0 个错误，1 条警告
-用时：4.639 秒
+用时：4.733 秒
 ==========================
 警告 (1)
 ==========================
@@ -12,9 +12,9 @@
 ==========================
 移除未引用对象 (76)
 ==========================
-简化掉的对象数: 2703/3268
+简化掉的对象数: 2716/3288
 ---------------------------------------------------------------------
-保留的默认对象数: 272/2946
+保留的默认对象数: 272/2945
 ---------------------------------------------------------------------
 单位 'hphx' 火凤凰 - 脚本里的'hpea'[农民]引用了它
 单位 'hpea' 农民 - 脚本里的'hpea'[农民]引用了它
@@ -25,12 +25,12 @@
 单位 'hmtm' 迫击炮小队 - 脚本里的'hpea'[农民]引用了它
 单位 'Hpal' 圣骑士 - 脚本里的'hpea'[农民]引用了它
 单位 'hwtw' 哨塔 - 脚本里的'hpea'[农民]引用了它
-单位 'hpxe' 凤凰蛋 - 脚本里的'hpea'[农民]引用了它
+单位 'nmed' 麦迪文 - 脚本里的'Amrf'[乌鸦形态]引用了它
 技能 'Amls' 空中锁镣 - 脚本里的'hpea'[农民]引用了它
 技能 'AHds' 神圣护甲 - 脚本里的'hpea'[农民]引用了它
 技能 'AHwe' 召唤水元素 - 脚本里的'hpea'[农民]引用了它
 技能 'Asph' 球体 - 脚本里的'hpea'[农民]引用了它
-技能 'Adef' 防御 - 脚本里的'hfoo'[步兵]引用了它
+技能 'Adef' 防御 - 脚本里的'hpea'[农民]引用了它
 技能 'Argl' 送回黄金和木材 - 脚本里的'hpea'[农民]引用了它
 技能 'AHfs' 烈焰风暴 - 脚本里的'hpea'[农民]引用了它
 技能 'Aflk' 高射炮火 - 脚本里的'hpea'[农民]引用了它
@@ -46,7 +46,7 @@
 物品 'phea' 生命药水 - 脚本里的'hpea'[农民]引用了它
 物品 'ssan' 避难权杖 - 脚本里的'hpea'[农民]引用了它
 魔法效果 'Bhea' 医疗 - 脚本里的'u001'[建造马甲]引用了它
-魔法效果 'XHfs' 烈焰风暴(效果) - 脚本里的'h01Q'[女巫僵尸]引用了它
+魔法效果 'XHfs' 烈焰风暴(效果) - 脚本里的'h028'[猩红女王（boss）]引用了它
 魔法效果 'Bcmg' 控制魔法 - 脚本里的'hpea'[农民]引用了它
 魔法效果 'Broa' 咆哮 - 脚本里的'h025'[混混僵尸老大]引用了它
 魔法效果 'Bply' 变形术 - 脚本里的'hpea'[农民]引用了它
@@ -58,105 +58,118 @@
 科技 'Rhfs' 碎片攻击 - 脚本里的'hpea'[农民]引用了它
 科技 'Rhla' 镶皮甲 - 脚本里的'hpea'[农民]引用了它
 科技 'Rhcd' 乌云技能 - 脚本里的'hpea'[农民]引用了它
-可破坏物 'BTtc' 贫瘠之地的伞状树木 - 地图上放置的'BTtc'[贫瘠之地的伞状树木]引用了它
 可破坏物 'BTtw' 荒芜之地树木 - 地图上放置的'BTtw'[荒芜之地树木]引用了它
-可破坏物 'LTlt' 夏季树木 - 地图上放置的'LTlt'[夏季树木]引用了它
+可破坏物 'Volc' 火山 - 地图上放置的'Volc'[火山]引用了它
+可破坏物 'VTlt' 村庄树木 - 地图上放置的'VTlt'[村庄树木]引用了它
 装饰物 'LOwf' 墙围泉水 - 地图上放置的'LOwf'[墙围泉水]引用了它
 装饰物 'LOhp' 系留柱 - 地图上放置的'LOhp'[系留柱]引用了它
 装饰物 'BOth' 王座 - 地图上放置的'BOth'[王座]引用了它
 ---------------------------------------------------------------------
-简化掉的自定义对象数: 29/322
+简化掉的自定义对象数: 43/343
 ---------------------------------------------------------------------
 单位 'h02C' 被感染的村民2
 单位 'h011' 低级导弹塔
-单位 'h02A' 邪恶的僵尸触手怪
-单位 'h028' 猩红女王
-单位 'h018' 高级导弹塔
-单位 'n003' 黑龙巢穴
+单位 'h00M' 钢铁矮墙（横）
+单位 'h017' 中级导弹塔
 单位 'h029' 无头僵尸
 单位 'h02G' test
 单位 'h00L' 钢铁矮墙（竖）
 单位 'h02B' 被感染的村民
+单位 'h02J' test
+单位 'h02E' 狙击兵2
+技能 'A023' 扎根 (驻兵塔)
+技能 'A025' 永久的隐形
+技能 'A011' 猩红岁月
+技能 'A015' 天神下凡
+技能 'A01R' 翅膀9
 技能 'AHfa' 灼热之箭
-技能 'A018' 攻击增幅 子弹
-技能 'A010' 风暴之锤 boss
-技能 'A012' 医疗波
-技能 'A014' 灵魂锁链
-技能 'AOae' 耐久光环
-技能 'A01B' 魔法书（扎根）
-技能 'A00I' 火球术
-技能 'A01J' 死亡凋零
-技能 'A01U' 带有腐蚀攻击效果的物品
+技能 'A00T' 翅膀3
+技能 'A021' 直线3个光柱
+技能 'A00R' 翅膀1
+技能 'A01N' 翅膀5
 科技 'R003' 泰坦
 
 ==========================
-无效的物编对象 (2)
+无效的物编对象 (3)
 ==========================
 魔兽无法识别技能: A012 - 魔兽无法识别未修改的自定义技能
+魔兽无法识别技能: A025 - 魔兽无法识别未修改的自定义技能
 魔兽无法识别技能: A014 - 魔兽无法识别未修改的自定义技能
 
 ==========================
-脚本优化 (668)
+保存到wts中的文本 (1)
+==========================
+w3i里的文本长度超过1023字符 - 文本保存在wts中会导致加载速度变慢: 
+|CffFF73731|r|Cfffa776d、|r|Cfff67c68为|r|Cfff28063防|r|Cffee855e止|r|Cffea8a58崩|r|Cffe58e53溃|r|Cffe1934e，|r|Cffdd9849请|r|Cffd99c43打|r|Cffd5a13e开|r|Cffd1a639o|r|Cffccaa34p|r|Cffc8af2fe|r|Cffc4b329n|r|Cffc0b824G|r|Cffbcbd1fL|r|Cffb7c11a再|r|Cffb3c614进|r|Cffafcb0f入|r|Cffabcf0a游|r|Cffa7d405戏|r|Cffff7373
+|r|Cfffb776e2|r|Cfff77b69、|r|Cfff37f64输|r|Cffef845f入|r|Cffeb885b+|r|Cffe88c56+|r|Cffe49051或|r|Cffe0954c+|r|Cffdc9947，|r|Cffd89d43- |r|Cffd1a639- |r|Cffc9ae2f或|r|Cffc5b22b-|r|Cffc1b726可|r|Cffbdbb21以|r|Cffbabf1c调|r|Cffb6c317整|r|Cffb2c813视|r|Cffaecc0e距|r|Cffaad009。|r|Cff00ff00
+|r|Cffff73733|r|Cfff8766f、|r|Cfff2796c本|r|Cffec7c68作|r|Cffe67f65为|r|Cffe08261合|r|Cffda855e作|r|Cffd4885a类|r|Cffce8b57型|r|Cffc88e53生|r|Cffc29150存|r|Cffbc954c地|r|Cffb59849图|r|Cffaf9b45，|r|Cffa99e42合|r|Cffa3a13e理|r|Cff9da43b分|r|Cff97a737配|r|Cff91aa34资|r|Cff8bad30源|r|Cff85b02d，|r|Cff7fb329切|r|Cff79b726莫|r|Cff72ba22做|r|Cff6cbd1f...
+-------------------------
+
+==========================
+脚本优化 (672)
 ==========================
 --------------------------------------------------
-未引用的全局变量 (108)
+未引用的全局变量 (111)
 --------------------------------------------------
-YDWEAbilityState___ABILITY_DATA_EFFECT_ART - 第[42]行：
-YDWEAbilityState___ABILITY_DATA_AREAEFFECT_ART - 第[43]行：
-YDWEAbilityState___ABILITY_DATA_MISSILE_ART - 第[44]行：
-YDWEAbilityState___ABILITY_DATA_SPECIAL_ART - 第[45]行：
-YDWEAbilityState___ABILITY_DATA_LIGHTNING_EFFECT - 第[46]行：
-YDWEAbilityState___ABILITY_DATA_BUFF_TIP - 第[47]行：
-YDWEAbilityState___ABILITY_DATA_BUFF_UBERTIP - 第[48]行：
-YDWEAbilityState___ABILITY_DATA_RESEARCH_TIP - 第[49]行：
-YDWEAbilityState___ABILITY_DATA_TIP - 第[50]行：
-YDWEAbilityState___ABILITY_DATA_UNTIP - 第[51]行：
-YDWEAbilityState___ABILITY_DATA_RESEARCH_UBERTIP - 第[52]行：
-YDWEAbilityState___ABILITY_DATA_UBERTIP - 第[53]行：
-YDWEAbilityState___ABILITY_DATA_UNUBERTIP - 第[54]行：
-YDWEAbilityState___ABILITY_DATA_UNART - 第[55]行：
-LIBRARY_YDWEBase - 第[58]行：
-bj_AllString - 第[60]行：
-bj_lastAbilityTargetUnit - 第[63]行：
-bj_lastPoolAbstractedUnit - 第[64]行：
 bj_lastCreatedUnitPool - 第[65]行：
 bj_lastPoolAbstractedItem - 第[66]行：
+bj_lastCreatedItemPool - 第[67]行：
+bj_lastSetAttackType - 第[68]行：
+bj_lastSetDamageType - 第[69]行：
+bj_lastSetWeaponType - 第[70]行：
+LIBRARY_YDWEGeneralBounsSystem - 第[81]行：
+LIBRARY_YDWEGetCurrentCameraSetupNull - 第[96]行：
+LIBRARY_YDWEGetPlayersByMapControlNull - 第[100]行：
+LIBRARY_YDWEGetUnitsInRangeOfLocMatchingNull - 第[104]行：
+LIBRARY_YDWEGetUnitsInRectMatchingNull - 第[107]行：
+LIBRARY_YDWEGetUnitsOfPlayerMatchingNull - 第[110]行：
+LIBRARY_YDWEJapiEffect - 第[114]行：
+LIBRARY_YDWEMultiboardSetItemIconBJNull - 第[117]行：
+LIBRARY_YDWEMultiboardSetItemStyleBJNull - 第[120]行：
+LIBRARY_YDWEMultiboardSetItemValueBJNull - 第[123]行：
+LIBRARY_YDWEMultiboardSetItemWidthBJNull - 第[126]行：
+LIBRARY_YDWETriggerRegisterEnterRectSimpleNull - 第[129]行：
+LIBRARY_MemoryLeakHelper - 第[133]行：
+MemoryLeakHelper___HASH_DECAY_TIME - 第[134]行：
 --------------------------------------------------
-未引用的函数 (547)
+未引用的函数 (545)
 --------------------------------------------------
-DzFrameGetParent - 第[543]行：
-DzFrameSetTextAlignment - 第[544]行：
-DzFrameGetName - 第[545]行：
-DzAPI_Map_SaveServerValue - 第[546]行：
-DzAPI_Map_GetServerValue - 第[547]行：
-DzAPI_Map_Ladder_SetStat - 第[548]行：
-DzAPI_Map_IsRPGLadder - 第[549]行：
-DzAPI_Map_GetGameStartTime - 第[550]行：
-DzAPI_Map_Stat_SetStat - 第[551]行：
-DzAPI_Map_GetMatchType - 第[552]行：
-DzAPI_Map_Ladder_SetPlayerStat - 第[553]行：
-DzAPI_Map_GetServerValueErrorCode - 第[554]行：
-DzAPI_Map_GetLadderLevel - 第[555]行：
-DzAPI_Map_IsRedVIP - 第[556]行：
-DzAPI_Map_IsBlueVIP - 第[557]行：
-DzAPI_Map_GetLadderRank - 第[558]行：
-DzAPI_Map_GetMapLevelRank - 第[559]行：
-DzAPI_Map_GetGuildName - 第[560]行：
-DzAPI_Map_GetGuildRole - 第[561]行：
-DzAPI_Map_IsRPGLobby - 第[562]行：
+YDWESetLocalVariableAbilityIDArray - 第[3815]-[3819]行
+YDWEGetLocalVariableAbilityIDArray - 第[3820]-[3824]行
+YDWESetLocalVariableItem - 第[3826]-[3830]行
+YDWEGetLocalVariableItem - 第[3831]-[3835]行
+YDWESetLocalVariableItemArray - 第[3836]-[3840]行
+YDWEGetLocalVariableItemArray - 第[3841]-[3845]行
+YDWESetLocalVariableItemID - 第[3847]-[3851]行
+YDWEGetLocalVariableItemID - 第[3852]-[3856]行
+YDWESetLocalVariableItemIDArray - 第[3857]-[3861]行
+YDWEGetLocalVariableItemIDArray - 第[3862]-[3866]行
+YDWESetLocalVariableLocation - 第[3868]-[3872]行
+YDWEGetLocalVariableLocation - 第[3873]-[3877]行
+YDWESetLocalVariableLocationArray - 第[3878]-[3882]行
+YDWEGetLocalVariableLocationArray - 第[3883]-[3887]行
+YDWESetLocalVariableGroup - 第[3889]-[3893]行
+YDWESetLocalVariableGroupArray - 第[3899]-[3903]行
+YDWEGetLocalVariableGroupArray - 第[3904]-[3908]行
+YDWESetLocalVariableEffect - 第[3910]-[3914]行
+YDWEGetLocalVariableEffect - 第[3915]-[3919]行
+YDWESetLocalVariableEffectArray - 第[3920]-[3924]行
 --------------------------------------------------
-未引用的局部变量 (13)
+未引用的局部变量 (16)
 --------------------------------------------------
-YDWEGeneralBounsSystem___SetUnitMaxState - 第[2510]行：[s]
-YDWEGeneralBounsSystem___SetUnitMaxState - 第[2514]行：[a]
-YDWETimerDestroyTextTag - 第[3974]行：[N]
-YDWETimerDestroyTextTag - 第[3975]行：[i]
-YDWETimerSystem___Main - 第[3986]行：[p]
-InitGlobals - 第[4113]行：[i]
-CreateUnitsForPlayer0 - 第[4148]行：[unitID]
-CreateUnitsForPlayer0 - 第[4149]行：[t]
-CreateUnitsForPlayer0 - 第[4150]行：[life]
-CreateBuildingsForPlayer11 - 第[4157]行：[unitID]
-CreateBuildingsForPlayer11 - 第[4158]行：[t]
-CreateBuildingsForPlayer11 - 第[4159]行：[life]
-CreateRegions - 第[4378]行：[we]
+YDWEGeneralBounsSystem___SetUnitMaxState - 第[2522]行：[s]
+YDWEGeneralBounsSystem___SetUnitMaxState - 第[2526]行：[a]
+YDWETimerDestroyTextTag - 第[4048]行：[N]
+YDWETimerDestroyTextTag - 第[4049]行：[i]
+YDWETimerSystem___Main - 第[4060]行：[p]
+InitGlobals - 第[4187]行：[i]
+CreateUnitsForPlayer0 - 第[4226]行：[unitID]
+CreateUnitsForPlayer0 - 第[4227]行：[t]
+CreateUnitsForPlayer0 - 第[4228]行：[life]
+CreateBuildingsForPlayer11 - 第[4235]行：[unitID]
+CreateBuildingsForPlayer11 - 第[4236]行：[t]
+CreateBuildingsForPlayer11 - 第[4237]行：[life]
+CreateNeutralPassiveBuildings - 第[4427]行：[unitID]
+CreateNeutralPassiveBuildings - 第[4428]行：[t]
+CreateNeutralPassiveBuildings - 第[4429]行：[life]
+CreateRegions - 第[4463]行：[we]
