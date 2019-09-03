@@ -1,8 +1,8 @@
-E:\Program\War3Map\resource\model3\机枪兵2\Marine-SC2.mdx
-E:\Program\War3Map\resource\model6\z8.mdx
-C:\Users\Administrator\Downloads\20190602656344d2-46b1-46d4-85ab-deb4e527f0e9\BloodElfBall.MDX
-C:\Users\Administrator\Downloads\20190415eccf11bc-4678-4a39-a04c-ca9d945d134e\法力爆红\RedManaBurst.mdx
-D:\QQ\QQData\3308015157\FileRecv\技能建筑\魔法建筑物\建筑物\NE-UN Birth\NE - UN Brth.mdx
-E:\Program\War3Map\resource\model6\ziranchuansongmen.mdx
-E:\Program\War3Map\resource\model6\tayanjiusuoLow.mdx
-E:\Program\War3Map\resource\model6\tayanjiusuoHigh.mdx
+C:\Users\Administrator\Desktop\机枪兵2\145.mdx
+C:\Users\Administrator\Desktop\新建文件夹\188.mdx
+C:\Users\Administrator\Desktop\新建文件夹 (2)\190.mdx
+D:\QQ\QQData\3308015157\FileRecv\人物+特效1\人物+特效1\rulerskinq3\rulerskinq3.mdx
+D:\QQ\QQData\3308015157\FileRecv\人物+特效1\人物+特效1\renwutexiao10\sakuyaworld.mdx
+D:\QQ\QQData\3308015157\FileRecv\人物+特效1\人物+特效1\sandexplosion2\sandexplosion2.mdx
+C:\Users\Administrator\Desktop\eff\buildEff7\buildEff7.mdx
+C:\Users\Administrator\Desktop\eff\buildEff8\ancientexplode.mdx
